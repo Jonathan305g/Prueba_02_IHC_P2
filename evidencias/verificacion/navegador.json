@@ -1,0 +1,68 @@
+{
+  "version": "2.0.1",
+  "fecha_utc": "2026-11-25T22:27:00.443Z",
+  "navegador": "158.0.8127.88",
+  "alcance": "Verificacion tecnica automatizada. No son sesiones de usuarios ni tiempos de usabilidad.",
+  "checks": [
+    {
+      "nombre": "T1: busqueda sin tildes, agregado y total USD 1",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "T2: cantidad 3, total USD 3 y persistencia tras recarga",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "HE04: validacion inmediata de cero sin modificar el total",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "HE03: expreso encuentra Capuchino",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "HE01: deshacer tiene foco y permanece disponible despues de 11 s",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "HE05: conservar y Escape no vacian; vaciar exige confirmacion y puede deshacerse",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "T3: revision, Escape seguro, confirmacion, foco y una sola orden",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "cinco clics rapidos conservan cinco unidades",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "la revision espera al cambio de cantidad antes de mostrar el total",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "fallo real de setItem: no hay exito ni perdida de carrito; reintento sin duplicar",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "HE02: movil sin desbordamiento y acciones sin barra superpuesta",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "responsive: 320, 360, 600, 960 y 1366 px sin desbordamiento horizontal",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "teclado: salto al catalogo y foco visible",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "almacenamiento bloqueado al iniciar: aviso de modo temporal y recarga sin promesa de persistencia",
+      "resultado": "Pasa"
+    },
+    {
+      "nombre": "sin excepciones JavaScript durante los recorridos de escritorio",
+      "resultado": "Pasa"
+    }
+  ]
+}

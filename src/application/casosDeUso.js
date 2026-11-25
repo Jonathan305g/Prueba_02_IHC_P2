@@ -88,8 +88,8 @@ export class CancelarPedido {
   async ejecutar() {
     const carrito = await this.repoPedidos.obtenerCarrito();
     if (carrito.estaVacio) return { carrito, cancelado: null };
-    this.anterior = carrito;
     await this.repoPedidos.vaciarCarrito();
+    this.anterior = carrito;
     return { carrito: await this.repoPedidos.obtenerCarrito(), cancelado: carrito };
   }
   async deshacer() {
@@ -111,8 +111,7 @@ export class ConfirmarPedido {
   async ejecutar() {
     const carrito = await this.repoPedidos.obtenerCarrito();
     const confirmado = carrito.confirmar();
-    await this.repoPedidos.guardarConfirmado(confirmado);
-    await this.repoPedidos.vaciarCarrito();
+    await this.repoPedidos.confirmarCarrito(confirmado);
     return confirmado;
   }
 }
@@ -129,3 +128,4 @@ export function crearCasosDeUso({ repoProductos, repoPedidos }) {
     confirmarPedido: new ConfirmarPedido(repoPedidos),
   };
 }
+

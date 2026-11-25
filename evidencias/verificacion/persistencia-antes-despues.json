@@ -1,0 +1,28 @@
+{
+  "base_commit": "4d9037e30f174e8f78f7e42dfad25fde2dfdf456",
+  "version_actual": "2.0.1",
+  "archivos_v1_verificados": 66,
+  "tipo": "Prueba tecnica en Node con almacenamiento que rechaza escrituras. No es una sesion de participante.",
+  "antes": {
+    "cantidad_informada": 3,
+    "cantidad_guardada": 1,
+    "error_cambio": null,
+    "confirmacion_informada": "confirmado",
+    "error_confirmacion": null,
+    "historial": 0,
+    "carrito_vacio": true,
+    "busqueda_expreso": []
+  },
+  "despues": {
+    "cantidad_informada": null,
+    "cantidad_guardada": 1,
+    "error_cambio": "ALMACENAMIENTO_NO_DISPONIBLE",
+    "confirmacion_informada": null,
+    "error_confirmacion": "ALMACENAMIENTO_NO_DISPONIBLE",
+    "historial": 0,
+    "carrito_vacio": false,
+    "busqueda_expreso": [
+      "Capuchino"
+    ]
+  }
+}

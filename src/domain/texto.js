@@ -8,3 +8,11 @@ export function normalizarTexto(valor) {
     .replace(/\s+/g, ' ')
     .trim();
 }
+
+// Equivalencias acotadas al vocabulario del catalogo; no alteran el texto visible.
+export function normalizarBusqueda(valor) {
+  return normalizarTexto(valor).split(' ')
+    .map((palabra) => ({ expreso: 'espresso', expresso: 'espresso' })[palabra] ?? palabra)
+    .join(' ');
+}
+

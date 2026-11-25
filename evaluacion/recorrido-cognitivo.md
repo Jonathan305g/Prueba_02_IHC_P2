@@ -39,3 +39,20 @@ Estado inicial: resultado de T2 (3 *Café con leche*, total `$3,00`).
 | RC01 | T2 · Paso 2 | P4 (parcial) | Al editar manualmente el campo numérico de cantidad, no hay retroalimentación preventiva en `input` hasta perder el foco (`change`). | HE04 |
 | RC02 | T3 · Paso 3 | P2 (parcial) | El foco tras eliminar permanece en `#cant-...` mientras el botón `Deshacer` queda al final del DOM con temporizador de `10 s`. | HE01 |
 | RC03 | T3 · Paso 4 | P2 (parcial) | `Cancelar pedido` está visualmente pegado a `Revisar y confirmar pedido` sin confirmación previa al cancelar. | HE05 |
+
+
+
+## Revisión de diseño tras la actualización 2.0.1
+
+El recorrido anterior corresponde a la base v1. La tabla siguiente es una inspección razonada de los cambios; no se declara como una ejecución observada en navegador.
+
+| Tarea y paso | ¿Sabe qué lograr? | ¿Ve una acción? | ¿Relaciona acción con objetivo? | ¿Percibe progreso? |
+|---|---|---|---|---|
+| T2, editar cantidad | Consigna pide tres en total | Campo, − y + etiquetados | Etiqueta incluye producto y rango | Totales y error de dominio; interfaz por comprobar |
+| T2, cantidad inválida | Mantener entero entre 1 y 20 | Mensaje en input y validación al cambiar | Error junto al campo con aria-describedby | Se conserva el último valor válido; probar en navegador |
+| T3, eliminar | Quitar la empanada | Eliminar por producto | Nombre accesible incluye producto | Panel de recuperación dentro del carrito |
+| T3, recuperar | Restaurar lo eliminado | Deshacer recibe foco y no tiene plazo por segundos | Texto identifica la eliminación | Reaparecen producto y total; caso de uso probado |
+| T3, confirmar | Revisar y obtener código | Revisión y confirmación separadas | Resumen de líneas y total | Éxito solo tras guardar; persistencia probada |
+| Cancelar todo | Vaciar con posibilidad de conservar | Diálogo Conservar / Sí, vaciar | Explicación del efecto | Deshacer disponible tras vaciar; diálogo por comprobar |
+
+La próxima comprobación debe observar si se reconoce Deshacer sin pista, si Conservar recibe el foco y si los errores se anuncian correctamente por lector. La revisión técnica de foco y lector de pantalla se distingue de las sesiones con usuarios ya realizadas y registradas en el Excel.

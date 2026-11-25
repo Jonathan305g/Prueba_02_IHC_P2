@@ -23,7 +23,7 @@ export function Carrito(pedido, { onCambiarCantidad, onEliminar, onConfirmar, on
       }),
       el('p', { class: 'linea__subtotal' },
         el('span', { class: 'sr-only' }, 'Subtotal: '),
-        formatoMoneda(d.subtotal)
+        el('span', { 'data-js': 'subtotal' }, formatoMoneda(d.subtotal))
       ),
       el('button', {
         type: 'button',
@@ -38,7 +38,7 @@ export function Carrito(pedido, { onCambiarCantidad, onEliminar, onConfirmar, on
     el('dl', { class: 'totales' },
       el('div', { class: 'totales__fila' },
         el('dt', {}, 'Artículos'),
-        el('dd', {}, String(pedido.cantidadDeArticulos))
+        el('dd', { 'data-js': 'articulos' }, String(pedido.cantidadDeArticulos))
       ),
       el('div', { class: 'totales__fila totales__fila--total' },
         el('dt', {}, 'Total'),
@@ -50,6 +50,26 @@ export function Carrito(pedido, { onCambiarCantidad, onEliminar, onConfirmar, on
     el('button', { type: 'button', class: 'boton boton--secundario boton--ancho boton--cancelar', onclick: onCancelar },
       'Cancelar pedido')
   );
+}
+
+export function actualizarCarritoEnSitio(contenedor, pedido) {
+  if (pedido.estaVacio) return false;
+  const lineasActuales = [...contenedor.querySelectorAll('.linea')];
+  if (lineasActuales.length !== pedido.detalles.length) return false;
+  const coinciden = pedido.detalles.every((d, i) => lineasActuales[i].dataset.productoId === d.productoId);
+  if (!coinciden) return false;
+
+  pedido.detalles.forEach((d, i) => {
+    const linea = lineasActuales[i];
+    linea.querySelector('.cantidad')?.actualizar?.(d.cantidad);
+    const subtotal = linea.querySelector('[data-js="subtotal"]');
+    if (subtotal) subtotal.textContent = formatoMoneda(d.subtotal);
+  });
+  const articulos = contenedor.querySelector('[data-js="articulos"]');
+  if (articulos) articulos.textContent = String(pedido.cantidadDeArticulos);
+  const total = contenedor.querySelector('[data-js="total"]');
+  if (total) total.textContent = formatoMoneda(pedido.total);
+  return true;
 }
 
 export function ResumenPedido(pedido) {

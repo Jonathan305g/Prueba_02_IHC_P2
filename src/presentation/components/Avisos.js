@@ -12,6 +12,8 @@ export function crearAvisos(contenedor) {
 
   function mostrar(mensaje, { tipo = 'info', accion = null, duracion = 6000 } = {}) {
     cerrar();
+    contenedor.setAttribute('role', tipo === 'error' ? 'alert' : 'status');
+    contenedor.setAttribute('aria-live', tipo === 'error' ? 'assertive' : 'polite');
     const aviso = el('div', { class: `aviso aviso--${tipo}` },
       el('p', { class: 'aviso__texto' }, mensaje),
       accion
@@ -29,7 +31,7 @@ export function crearAvisos(contenedor) {
 
     const programar = () => {
       clearTimeout(temporizador);
-      temporizador = setTimeout(cerrar, duracion);
+      if (duracion > 0) temporizador = setTimeout(cerrar, duracion);
     };
     aviso.addEventListener('mouseenter', () => clearTimeout(temporizador));
     aviso.addEventListener('mouseleave', programar);
@@ -43,3 +45,4 @@ export function crearAvisos(contenedor) {
 
   return { mostrar, cerrar };
 }
+

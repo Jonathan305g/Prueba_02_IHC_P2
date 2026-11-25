@@ -1,0 +1,35 @@
+CAFEU - ACTUALIZACION SOBRE LA V1 DE JONATHAN
+
+Base: Jonathan305g/Prueba_02_IHC_P2
+V1: 1.0.0, commit 4d9037e30f174e8f78f7e42dfad25fde2dfdf456
+Resultado: 2.0.1 con mejoras de recuperacion, cancelacion, busqueda,
+mensajes, cantidades y persistencia.
+
+PARA EJECUTAR
+1. Instalar Node.js 20 o superior.
+2. Abrir una terminal en esta carpeta, donde esta package.json.
+3. Ejecutar: npm start
+4. Abrir: http://localhost:5173
+
+PARA COMPROBAR
+npm test
+npm run metricas
+npm run comprobar
+
+CONTENIDO
+src/: aplicacion corregida.
+evaluacion/: Excel original, datos, instrumentos, resultados y metricas.
+docs/: analisis, requisitos, arquitectura, trazabilidad y guia de subida.
+prototipos/: wireframes y capturas originales de la V1.
+evidencias/: antecedentes y registros de verificacion tecnica.
+
+Leer docs/base-v1.md para comprobar la version de partida.
+Leer docs/guia-actualizacion.md para subir el contenido con una rama y dos commits.
+Leer evaluacion/validacion-v2.md para conocer el alcance de la evaluacion.
+
+Comprobado: 26 pruebas de Node en la actualizacion (15 en la V1) y 15/15
+verificaciones automatizadas de interfaz en Google Chrome con 10 capturas en
+evidencias/despues/.
+Pruebas con usuarios: realizadas y documentadas en el Excel, confirmado
+por William Martinez. No se solicita repetirlas.
+Pendiente: subida a GitHub y revision del Pull Request por un companero.

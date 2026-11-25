@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: la app arranca con catálogo cargado y carrito vacío
+ok 1 - la app arranca con catálogo cargado y carrito vacío
+  ---
+  duration_ms: 2.355648
+  type: 'test'
+  ...
+# Subtest: SUS conserva cero y cien; una respuesta omitida no se imputa
+ok 2 - SUS conserva cero y cien; una respuesta omitida no se imputa
+  ---
+  duration_ms: 1.052481
+  type: 'test'
+  ...
+# Subtest: el calculo de la fuente excluye P00 y separa ayuda, parcial y fallo
+ok 3 - el calculo de la fuente excluye P00 y separa ayuda, parcial y fallo
+  ---
+  duration_ms: 6.967366
+  type: 'test'
+  ...
+# Subtest: sin intentos no se comunica un cero de satisfaccion ni una tasa de exito
+ok 4 - sin intentos no se comunica un cero de satisfaccion ni una tasa de exito
+  ---
+  duration_ms: 0.409776
+  type: 'test'
+  ...
+# Subtest: una escritura bloqueada no informa un cambio ni pierde el carrito guardado
+ok 5 - una escritura bloqueada no informa un cambio ni pierde el carrito guardado
+  ---
+  duration_ms: 4.854343
+  type: 'test'
+  ...
+# Subtest: una confirmacion fallida conserva carrito e historial y permite reintentar una sola vez
+ok 6 - una confirmacion fallida conserva carrito e historial y permite reintentar una sola vez
+  ---
+  duration_ms: 1.342387
+  type: 'test'
+  ...
+# Subtest: migrar un carrito v1 conserva su identificador, productos e historial
+ok 7 - migrar un carrito v1 conserva su identificador, productos e historial
+  ---
+  duration_ms: 0.900002
+  type: 'test'
+  ...
+# Subtest: una cancelacion fallida no habilita deshacer ni vacia el carrito
+ok 8 - una cancelacion fallida no habilita deshacer ni vacia el carrito
+  ---
+  duration_ms: 0.84561
+  type: 'test'
+  ...
+# Subtest: un intento fallido de deshacer conserva la recuperacion para reintentar
+ok 9 - un intento fallido de deshacer conserva la recuperacion para reintentar
+  ---
+  duration_ms: 1.179722
+  type: 'test'
+  ...
+# Subtest: un JSON danado se informa y no se sobrescribe silenciosamente
+ok 10 - un JSON danado se informa y no se sobrescribe silenciosamente
+  ---
+  duration_ms: 1.208565
+  type: 'test'
+  ...
+# Subtest: la memoria conserva datos durante la sesion y declara su modo
+ok 11 - la memoria conserva datos durante la sesion y declara su modo
+  ---
+  duration_ms: 1.006261
+  type: 'test'
+  ...
+# Subtest: expreso y expresso encuentran Capuchino sin alterar filtros ni precios
+ok 12 - expreso y expresso encuentran Capuchino sin alterar filtros ni precios
+  ---
+  duration_ms: 1.83041
+  type: 'test'
+  ...
+# Subtest: "CAFE", "café" y "cafe leche" encuentran Café con leche
+ok 13 - "CAFE", "café" y "cafe leche" encuentran Café con leche
+  ---
+  duration_ms: 2.861929
+  type: 'test'
+  ...
+# Subtest: "sanduche" encuentra Sánduche mixto
+ok 14 - "sanduche" encuentra Sánduche mixto
+  ---
+  duration_ms: 0.897659
+  type: 'test'
+  ...
+# Subtest: agregar un producto deja cantidad 1 en el carrito
+ok 15 - agregar un producto deja cantidad 1 en el carrito
+  ---
+  duration_ms: 2.081497
+  type: 'test'
+  ...
+# Subtest: agregar el mismo producto dos veces suma la cantidad
+ok 16 - agregar el mismo producto dos veces suma la cantidad
+  ---
+  duration_ms: 0.388304
+  type: 'test'
+  ...
+# Subtest: un producto agotado no se puede agregar
+ok 17 - un producto agotado no se puede agregar
+  ---
+  duration_ms: 1.069106
+  type: 'test'
+  ...
+# Subtest: cambiar a 3 cafés con leche deja el total en 3,00
+ok 18 - cambiar a 3 cafés con leche deja el total en 3,00
+  ---
+  duration_ms: 4.01446
+  type: 'test'
+  ...
+# Subtest: con 3 cafés con leche y 1 sánduche mixto el total es 4,75
+ok 19 - con 3 cafés con leche y 1 sánduche mixto el total es 4,75
+  ---
+  duration_ms: 0.908234
+  type: 'test'
+  ...
+# Subtest: la cantidad 0 se rechaza y el carrito no cambia
+ok 20 - la cantidad 0 se rechaza y el carrito no cambia
+  ---
+  duration_ms: 1.208405
+  type: 'test'
+  ...
+# Subtest: la cantidad 21 se rechaza y el carrito no cambia
+ok 21 - la cantidad 21 se rechaza y el carrito no cambia
+  ---
+  duration_ms: 0.799471
+  type: 'test'
+  ...
+# Subtest: la cantidad 2.5 se rechaza y el carrito no cambia
+ok 22 - la cantidad 2.5 se rechaza y el carrito no cambia
+  ---
+  duration_ms: 3.050804
+  type: 'test'
+  ...
+# Subtest: eliminar y deshacer devuelve la línea a la misma posición
+ok 23 - eliminar y deshacer devuelve la línea a la misma posición
+  ---
+  duration_ms: 3.9605
+  type: 'test'
+  ...
+# Subtest: cancelar el pedido y deshacer recupera todas las líneas
+ok 24 - cancelar el pedido y deshacer recupera todas las líneas
+  ---
+  duration_ms: 2.109289
+  type: 'test'
+  ...
+# Subtest: no se puede confirmar un pedido vacío
+ok 25 - no se puede confirmar un pedido vacío
+  ---
+  duration_ms: 1.499713
+  type: 'test'
+  ...
+# Subtest: confirmar guarda el pedido en el historial y vacía el carrito
+ok 26 - confirmar guarda el pedido en el historial y vacía el carrito
+  ---
+  duration_ms: 1.703078
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 181.828701
