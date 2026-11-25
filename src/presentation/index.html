@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CaféU 2.0 · Pedidos de la cafetería</title>
+  <meta name="description" content="Consulta productos de la cafetería universitaria, arma tu pedido y confírmalo.">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#catalogo-titulo">Saltar al catálogo</a>
+  <a class="saltar" href="#carrito-titulo">Saltar al carrito</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__fila">
+      <h1 class="marca">CaféU <span class="marca__version">2.0</span></h1>
+      <a class="cabecera__carrito" href="#carrito-titulo" data-js="enlace-carrito">
+        Carrito <span class="insignia" data-js="insignia">0</span>
+        <span class="sr-only" data-js="insignia-texto">productos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor disposicion">
+    <section class="catalogo" aria-labelledby="catalogo-titulo">
+      <h2 id="catalogo-titulo" tabindex="-1">Catálogo</h2>
+
+      <form class="buscador" role="search" data-js="buscador">
+        <label for="consulta">Buscar producto</label>
+        <div class="buscador__fila">
+          <input id="consulta" name="consulta" type="search" autocomplete="off"
+                 placeholder="Ej.: cafe, empanada, jugo" aria-describedby="ayuda-busqueda">
+          <button type="button" class="boton boton--secundario" data-js="limpiar-busqueda">Limpiar</button>
+        </div>
+        <p id="ayuda-busqueda" class="ayuda">Puedes escribir sin tildes ni mayúsculas.</p>
+
+        <fieldset class="categorias">
+          <legend>Categoría</legend>
+          <div class="categorias__lista" data-js="categorias"></div>
+        </fieldset>
+      </form>
+
+      <p class="resumen-busqueda" data-js="resumen-busqueda" aria-live="polite"></p>
+      <ul class="productos" data-js="productos"></ul>
+    </section>
+
+    <section class="carrito" aria-labelledby="carrito-titulo" data-js="carrito">
+      <h2 id="carrito-titulo" tabindex="-1">Tu pedido</h2>
+      <div data-js="carrito-contenido"></div>
+    </section>
+
+    <section class="exito" aria-labelledby="exito-titulo" data-js="exito" hidden>
+      <h2 id="exito-titulo" tabindex="-1">Pedido confirmado</h2>
+      <div data-js="exito-contenido"></div>
+      <button type="button" class="boton boton--primario" data-js="nuevo-pedido">Hacer otro pedido</button>
+    </section>
+  </main>
+
+  <div class="barra-movil" data-js="barra-movil" hidden>
+    <a class="boton boton--primario barra-movil__boton" href="#carrito-titulo">
+      Ver pedido · <span data-js="barra-total">$0,00</span>
+    </a>
+  </div>
+
+  <dialog class="dialogo" data-js="dialogo-confirmar" aria-labelledby="dialogo-titulo">
+    <form method="dialog" class="dialogo__cuerpo">
+      <h2 id="dialogo-titulo">Revisa tu pedido</h2>
+      <div data-js="dialogo-resumen"></div>
+      <div class="dialogo__acciones">
+        <button value="cancelar" class="boton boton--secundario">Volver y editar</button>
+        <button value="confirmar" class="boton boton--primario" data-js="dialogo-confirmar-btn">Confirmar pedido</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Mensajes del sistema: el lector de pantalla los anuncia sin mover el foco. -->
+  <div class="avisos" data-js="avisos" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
