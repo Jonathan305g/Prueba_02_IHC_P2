@@ -17,12 +17,12 @@
     {
       "ruta": "LEEME.txt",
       "estado": "nuevo",
-      "sha256": "219c83191dbc8ad9f68fd53904a0fbaedb4d5c23bd99a39280c0f7f7ab2eb1eb"
+      "sha256": "d5d2e654e8d9705e9e053222a9a08adfa45aef400aef76a62ccf2ead6f3b9861"
     },
     {
       "ruta": "README.md",
       "estado": "modificado",
-      "sha256": "c7141e7e88026570ef8c4c8569bf1652e86f5c669de05fb7e406ec2039298249"
+      "sha256": "9968567c27f6423c25a0a9c1d0023de922bbab273cec0e8771a582008884585c"
     },
     {
       "ruta": "docs/analisis-ux.md",
@@ -32,7 +32,7 @@
     {
       "ruta": "docs/arquitectura.md",
       "estado": "modificado",
-      "sha256": "11a674854c33548152099774fc1a106c075067733ee334fdf98cfe71ba97527e"
+      "sha256": "b08aad0b8d76f96699a92823714d788d949fbab0459977765e1916a4ee47d460"
     },
     {
       "ruta": "docs/base-v1.json",
@@ -47,12 +47,12 @@
     {
       "ruta": "docs/cambios-2.0.1.md",
       "estado": "nuevo",
-      "sha256": "c1b132042e0528bd9ff1f71438cbb480513f516932fea9dba9f88380bfdb482d"
+      "sha256": "18302960ad100d42ad534b8819426b5de359407d6b88f5fcac4f71da23484148"
     },
     {
       "ruta": "docs/control-entrega.md",
       "estado": "nuevo",
-      "sha256": "8ed82baf24df644fb8924b658258705e11513430696c292bb8a5129083d192ae"
+      "sha256": "eef899d29fa6d8754c1082380f13dd3a7ab2ab641293ce04d060faf14c0505fd"
     },
     {
       "ruta": "docs/enunciado/Prueba_Practica_Integradora_IHC_CafeU_2_Puntos.pdf",
@@ -62,12 +62,12 @@
     {
       "ruta": "docs/guia-actualizacion.md",
       "estado": "nuevo",
-      "sha256": "a93e051e7d1f2b7627eee003e83bb480d082ec53257024863ebe9467a6343531"
+      "sha256": "dfb5c7dd203e063e2122bc04f14956285b6514137561adc4536d78d455b42cfd"
     },
     {
       "ruta": "docs/requisitos.md",
       "estado": "modificado",
-      "sha256": "efb4343ba89a16f2c001e3afccf9664825d732e3cec00b251fb19e4c104ea5ac"
+      "sha256": "e4c6ad521dd60ef41b54ad2149872b504a7ee95dfd2b3784003f7e75295c63be"
     },
     {
       "ruta": "docs/sitemap.md",
@@ -77,7 +77,7 @@
     {
       "ruta": "docs/trazabilidad.md",
       "estado": "modificado",
-      "sha256": "c4143e46f613f83020342fa5055d2a934a6fc056d57d2ee5647aaeda6c2a69dc"
+      "sha256": "1146e95e485e82e20810caa759661a4f92d7a84b7a50dfa29094e9063319f3d7"
     },
     {
       "ruta": "docs/user-flow.md",
@@ -92,7 +92,7 @@
     {
       "ruta": "evaluacion/accesibilidad.md",
       "estado": "modificado",
-      "sha256": "4abd242bfbc7d22432f60ed58b7cb6037d595cc15b7436b207d9f534f350b8de"
+      "sha256": "37e101a0fee483619a4a16cc0d3ab727c7142514aed586a921ab6ab8530d358f"
     },
     {
       "ruta": "evaluacion/antecedentes/accesibilidad-v1.md",
@@ -107,7 +107,7 @@
     {
       "ruta": "evaluacion/backlog.md",
       "estado": "modificado",
-      "sha256": "e72b73a48670e389b8239660d4607cbac1a6a118501834a70b2adf855a95af66"
+      "sha256": "7262a5e98c8a9168a17bf9cc1daf92e704eebb4bfe23e27d8bb03ace32a84791"
     },
     {
       "ruta": "evaluacion/consentimiento.md",
@@ -137,7 +137,7 @@
     {
       "ruta": "evaluacion/heuristicas.md",
       "estado": "modificado",
-      "sha256": "e7b6cf900c75c5a2c822ec85f23fe38f4b4c175c66a2030d081b24eb39d183a6"
+      "sha256": "20dd0ecb643a0989e0db1b252cf81b442620c1382bdcc864bc33d6067305382a"
     },
     {
       "ruta": "evaluacion/hoja-observacion.md",
@@ -175,14 +175,14 @@
       "sha256": "46d9587e503ec2c9eeea7249c7f2530c2bc8b5502ccdbbe73359872b40e60080"
     },
     {
-      "ruta": "evaluacion/sesiones/LEEME.txt",
-      "estado": "modificado",
-      "sha256": "2720de5df612856c34a17e6da90b895f1442f02c1cf6f9bc7e60c15613dd704a"
-    },
-    {
       "ruta": "evaluacion/sesiones.csv",
       "estado": "nuevo",
       "sha256": "cdf808d5528d0dd2f6d8d1a5b76dc68c5d81c4465620e443f79c95ed9e025fac"
+    },
+    {
+      "ruta": "evaluacion/sesiones/LEEME.txt",
+      "estado": "modificado",
+      "sha256": "2720de5df612856c34a17e6da90b895f1442f02c1cf6f9bc7e60c15613dd704a"
     },
     {
       "ruta": "evaluacion/sus.csv",
@@ -197,12 +197,12 @@
     {
       "ruta": "evaluacion/validacion-v2.md",
       "estado": "nuevo",
-      "sha256": "1ee4a598cad7e303a39c52a55b18e6ef5ca985396c9ae55d4dc07be1a2f9b323"
+      "sha256": "e1a8c572b0b2678e54dc805f1ad9f7af9fb314ec52519abc072685d9e284686d"
     },
     {
       "ruta": "evidencias/README.md",
       "estado": "nuevo",
-      "sha256": "37d5559d6572188dfae4910fe63fd50f76e9896a2e0285b8f69513ba7f801119"
+      "sha256": "6e74d849737d10537e120a0f4ec63ea33826f748c9eba657de576c8a3ae2301c"
     },
     {
       "ruta": "evidencias/antes/.gitkeep",
@@ -240,14 +240,64 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "ruta": "evidencias/despues/H01-deshacer.png",
+      "estado": "nuevo",
+      "sha256": "239af5e3e84fb300d4214831769afca480c91df852c493d6a56d9f68d594ea21"
+    },
+    {
+      "ruta": "evidencias/despues/H02-movil.png",
+      "estado": "nuevo",
+      "sha256": "e10d5158f3b3833d5ba760975231be5cb348a72e52ff0b16c53137cfb47184c5"
+    },
+    {
+      "ruta": "evidencias/despues/H03-busqueda.png",
+      "estado": "nuevo",
+      "sha256": "ba29d9422247083822708ffa1331bd8a0046ec1c81bdf11f888ceec2eaf2fcd7"
+    },
+    {
+      "ruta": "evidencias/despues/H04-cantidad.png",
+      "estado": "nuevo",
+      "sha256": "5eacc11c7de5b102687b34f407df5b4a8f7b29169ebfa24c9199b112e08113ef"
+    },
+    {
+      "ruta": "evidencias/despues/H05-cancelacion.png",
+      "estado": "nuevo",
+      "sha256": "d8c292f3bb74fa19e113761fc6ca0a843e677024d3f52064d265b9390e5a8e9d"
+    },
+    {
+      "ruta": "evidencias/despues/H06-almacenamiento.png",
+      "estado": "nuevo",
+      "sha256": "ce42d58c3695feb90c66d50e7ad57c52571d7effb3244cde621c6870401536c0"
+    },
+    {
       "ruta": "evidencias/despues/README.md",
       "estado": "nuevo",
-      "sha256": "88c819b0f514a144b678f413d33325e15f0aaf117685b051d0a5cf27160534ac"
+      "sha256": "1b441346e3ef51fc4cf89c064cdbecd48e31326fc2c5031ea00b8ceeed1f0e17"
+    },
+    {
+      "ruta": "evidencias/despues/catalogo-movil.png",
+      "estado": "nuevo",
+      "sha256": "4701a9b733a7db2f628f86590c8633cf6c8771e62ab340eb48b8cfe058654ebe"
+    },
+    {
+      "ruta": "evidencias/despues/modo-memoria.png",
+      "estado": "nuevo",
+      "sha256": "508076f0d848d307d0f9ed44154261bec7c1853a3be4ab0fac75d59ce3c9a814"
+    },
+    {
+      "ruta": "evidencias/despues/pedido-confirmado.png",
+      "estado": "nuevo",
+      "sha256": "e8aba8c84942c770c1bb5b23ad673c27b82b11ee2a01a77c22725cee412bfd7b"
+    },
+    {
+      "ruta": "evidencias/despues/pedido-revision.png",
+      "estado": "nuevo",
+      "sha256": "87ba76c7d732359c6f0c4e489dc10c2d07c826b2ce6c692de3493c6b07d24c58"
     },
     {
       "ruta": "evidencias/verificacion/README.md",
       "estado": "nuevo",
-      "sha256": "36f9567fcf55af269fdf9acb178da836f6b6586b33f060ef12ffc34ebb8ec26d"
+      "sha256": "119dafae9b6e01db161bc8acd904d4d887dad4e5d422f72ede08c53c0ae34b43"
     },
     {
       "ruta": "evidencias/verificacion/base-v1.json",
@@ -262,7 +312,7 @@
     {
       "ruta": "evidencias/verificacion/navegador.json",
       "estado": "nuevo",
-      "sha256": "a2f3398fd5995241e7ba41ddf7d0e85f19f2e5552423d516fd5393f7563bab16"
+      "sha256": "46268dea136b95ed4a429c943303f01556d5877c0c322664083c611c91522ad8"
     },
     {
       "ruta": "evidencias/verificacion/node-tests.tap",
@@ -451,13 +501,13 @@
     },
     {
       "ruta": "src/presentation/components/Carrito.js",
-      "estado": "conservado",
-      "sha256": "d984b7548d421f441d05b8d8958e19e72887536dba89f4cd2206b36b7258437a"
+      "estado": "modificado",
+      "sha256": "c96a3901c093dcccaa37af353f1b8b6009b683e5edd2e44d34cc4391e8561da9"
     },
     {
       "ruta": "src/presentation/components/SelectorCantidad.js",
       "estado": "modificado",
-      "sha256": "fcb2543bdc0261e003b76076ff423884a466bae556a01e7def42db47322e65e4"
+      "sha256": "3be223e576d331d52b91063f08e7c5f57e5daec18a081bdc84d06f301aab71ff"
     },
     {
       "ruta": "src/presentation/components/TarjetaProducto.js",
@@ -477,7 +527,7 @@
     {
       "ruta": "src/presentation/main.js",
       "estado": "modificado",
-      "sha256": "5f1a7a28dccbf5f899282037b072720421d17d0f18484eec770542215da3ff2b"
+      "sha256": "7ab4e87bb238c85c64280622faf12b9a3272a02a64aa1483f2dec590db88c1f5"
     },
     {
       "ruta": "src/presentation/styles.css",
@@ -524,13 +574,15 @@
     "archivos_v1": 66,
     "pruebas_v1": 15,
     "pruebas_actualizacion": 26,
+    "pruebas_navegador": 15,
+    "capturas_despues": 10,
     "fallos": 0,
-    "enlaces_locales": 98,
+    "enlaces_locales": 99,
     "excel_original_conservado": true,
     "pruebas_con_usuarios": "Realizadas y registradas en el Excel, confirmado por William Martinez"
   },
   "limites": [
-    "Revision tecnica visual ejecutada posteriormente en Google Chrome (15/15 aprobadas, 10 capturas en evidencias/despues/); ver evidencias/verificacion/navegador.json.",
+    "Revision tecnica visual ejecutada en Google Chrome (15/15 aprobadas, 10 capturas en evidencias/despues/); ver evidencias/verificacion/navegador.json.",
     "El campo de version V2 se conserva como figura en el Excel; no se asigna un commit ausente del registro."
   ]
 }

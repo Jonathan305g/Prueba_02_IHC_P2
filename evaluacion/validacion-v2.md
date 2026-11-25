@@ -34,8 +34,8 @@ El Excel contiene V1-P00 (piloto), V1-P01/P02 y V2-P01/P02. William Martínez co
 
 Se conservan las respuestas, observaciones y códigos anotados sin modificarlos. El campo de versión V2 dice «V2 - revisión de interfaz»; no se inventa un commit para completar ese campo. Esta precisión documental no cambia el estado de realización de las sesiones.
 
-## Actividades que siguen pendientes
+## Estado de integración en GitHub
 
-Subir la rama a GitHub, abrir el Pull Request y obtener una revisión real de un compañero.
+La actualización `2.0.1` (con las 26 pruebas de Node, `15/15` comprobaciones de navegador en Google Chrome y las 10 capturas en `evidencias/despues/`) fue subida en la rama `william/actualizacion-integral-cafeu` e integrada en `main` mediante el Pull Request `#7` (`d1acd08`).
 
 La muestra de dos personas y el posible aprendizaje limitan la generalización y la atribución causal de las diferencias entre rondas.

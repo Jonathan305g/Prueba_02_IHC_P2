@@ -32,4 +32,4 @@ verificaciones automatizadas de interfaz en Google Chrome con 10 capturas en
 evidencias/despues/.
 Pruebas con usuarios: realizadas y documentadas en el Excel, confirmado
 por William Martinez. No se solicita repetirlas.
-Pendiente: subida a GitHub y revision del Pull Request por un companero.
+Estado en GitHub: actualizacion integrada en main mediante PR #7 (d1acd08).
