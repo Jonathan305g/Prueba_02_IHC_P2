@@ -86,6 +86,7 @@ h2[tabindex="-1"]:focus-visible { outline: 3px solid var(--foco); }
 .boton--peligro { background: var(--blanco); color: var(--peligro); border-color: var(--peligro); }
 .boton--peligro:hover { background: var(--peligro-fondo); }
 .boton--ancho { width: 100%; margin-top: 1rem; }
+.boton--cancelar { margin-top: 0.5rem; }
 
 /* ---------- Buscador ---------- */
 .buscador { background: var(--blanco); padding: 1rem; border-radius: var(--radio); box-shadow: var(--sombra); }

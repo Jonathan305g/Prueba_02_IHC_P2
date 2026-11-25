@@ -44,7 +44,7 @@ Usa el runner nativo de Node (`node --test`), que busca todos los archivos `*.te
 - Catálogo por categorías con productos agotados marcados.
 - Búsqueda que ignora tildes y mayúsculas y acepta varias palabras en cualquier orden (`cafe leche`, `SANDUCHE`).
 - Carrito con selector de cantidad (botones − / + y escritura directa, de 1 a 20), subtotal por línea y total.
-- Eliminar producto con opción **Deshacer** durante 10 segundos.
+- Eliminar un producto o cancelar el pedido completo, con opción **Deshacer** durante 10 segundos.
 - Revisión del pedido en un diálogo antes de confirmar; número de pedido al confirmar.
 - El carrito se guarda en LocalStorage y sobrevive a recargar la página.
 - Mobile First, navegación completa por teclado, foco visible, enlaces para saltar secciones y avisos anunciados por lector de pantalla.

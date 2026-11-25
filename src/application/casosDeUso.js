@@ -79,6 +79,31 @@ export class EliminarDelCarrito {
   }
 }
 
+// Cancelar vacía el carrito completo; se puede deshacer mientras no se agregue otra cosa.
+export class CancelarPedido {
+  constructor(repoPedidos) {
+    this.repoPedidos = repoPedidos;
+    this.anterior = null;
+  }
+  async ejecutar() {
+    const carrito = await this.repoPedidos.obtenerCarrito();
+    if (carrito.estaVacio) return { carrito, cancelado: null };
+    this.anterior = carrito;
+    await this.repoPedidos.vaciarCarrito();
+    return { carrito: await this.repoPedidos.obtenerCarrito(), cancelado: carrito };
+  }
+  async deshacer() {
+    if (!this.anterior) return null;
+    await this.repoPedidos.guardarCarrito(this.anterior);
+    const restaurado = this.anterior;
+    this.anterior = null;
+    return restaurado;
+  }
+  olvidar() {
+    this.anterior = null;
+  }
+}
+
 export class ConfirmarPedido {
   constructor(repoPedidos) {
     this.repoPedidos = repoPedidos;
@@ -100,6 +125,7 @@ export function crearCasosDeUso({ repoProductos, repoPedidos }) {
     agregarAlCarrito: new AgregarAlCarrito(repoProductos, repoPedidos),
     cambiarCantidad: new CambiarCantidad(repoPedidos),
     eliminarDelCarrito: new EliminarDelCarrito(repoPedidos),
+    cancelarPedido: new CancelarPedido(repoPedidos),
     confirmarPedido: new ConfirmarPedido(repoPedidos),
   };
 }

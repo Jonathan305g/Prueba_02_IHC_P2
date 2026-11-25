@@ -1,7 +1,7 @@
 import { el, formatoMoneda } from './formato.js';
 import { SelectorCantidad } from './SelectorCantidad.js';
 
-export function Carrito(pedido, { onCambiarCantidad, onEliminar, onConfirmar }) {
+export function Carrito(pedido, { onCambiarCantidad, onEliminar, onConfirmar, onCancelar }) {
   if (pedido.estaVacio) {
     return el('div', { class: 'carrito__vacio' },
       el('p', {}, 'Tu pedido está vacío.'),
@@ -46,7 +46,9 @@ export function Carrito(pedido, { onCambiarCantidad, onEliminar, onConfirmar }) 
       )
     ),
     el('button', { type: 'button', class: 'boton boton--primario boton--ancho', onclick: onConfirmar },
-      'Revisar y confirmar pedido')
+      'Revisar y confirmar pedido'),
+    el('button', { type: 'button', class: 'boton boton--secundario boton--ancho boton--cancelar', onclick: onCancelar },
+      'Cancelar pedido')
   );
 }
 

@@ -105,6 +105,7 @@ function pintarCarrito({ enfocar } = {}) {
       onCambiarCantidad: cambiarCantidad,
       onEliminar: eliminar,
       onConfirmar: abrirConfirmacion,
+      onCancelar: cancelarPedido,
     })
   );
   const articulos = pedido.cantidadDeArticulos;
@@ -122,6 +123,7 @@ function pintarCarrito({ enfocar } = {}) {
 async function agregar(productoId) {
   try {
     const { carrito, producto } = await casos.agregarAlCarrito.ejecutar(productoId);
+    casos.cancelarPedido.olvidar();
     estado.carrito = carrito;
     pintarCarrito();
     await pintarCatalogo();
@@ -172,6 +174,30 @@ async function deshacerEliminacion() {
   avisos.mostrar('Se recuperó el producto en tu pedido.', { tipo: 'exito' });
 }
 
+async function cancelarPedido() {
+  const { carrito, cancelado } = await casos.cancelarPedido.ejecutar();
+  if (!cancelado) return;
+  casos.eliminarDelCarrito.olvidar();
+  estado.carrito = carrito;
+  pintarCarrito({ enfocar: null });
+  document.getElementById('carrito-titulo').focus();
+  await pintarCatalogo();
+  avisos.mostrar(`Cancelaste el pedido (${cancelado.cantidadDeArticulos} artículos).`, {
+    tipo: 'aviso',
+    duracion: 10000,
+    accion: { texto: 'Deshacer', ejecutar: deshacerCancelacion },
+  });
+}
+
+async function deshacerCancelacion() {
+  const restaurado = await casos.cancelarPedido.deshacer();
+  if (!restaurado) return;
+  estado.carrito = restaurado;
+  pintarCarrito({ enfocar: '.linea .cantidad__campo' });
+  await pintarCatalogo();
+  avisos.mostrar('Se recuperó tu pedido.', { tipo: 'exito' });
+}
+
 // ---------- Confirmación ----------
 
 function abrirConfirmacion() {
@@ -188,6 +214,7 @@ ui.dialogo.addEventListener('close', async () => {
   try {
     const confirmado = await casos.confirmarPedido.ejecutar();
     casos.eliminarDelCarrito.olvidar();
+    casos.cancelarPedido.olvidar();
     estado.carrito = await casos.obtenerCarrito.ejecutar();
     mostrarExito(confirmado);
   } catch (e) {

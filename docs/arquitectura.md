@@ -13,7 +13,8 @@ src/
 │   └── components/          TarjetaProducto, SelectorCantidad, Carrito, Avisos, formato
 ├── application/     Casos de uso
 │   └── casosDeUso.js        BuscarProductos, AgregarAlCarrito, CambiarCantidad,
-│                            EliminarDelCarrito (con deshacer), ConfirmarPedido, ObtenerCarrito
+│                            EliminarDelCarrito y CancelarPedido (con deshacer),
+│                            ConfirmarPedido, ObtenerCarrito
 ├── domain/          Entidades y reglas de negocio
 │   ├── Producto.js
 │   ├── Pedido.js            agregado raíz (el carrito es un Pedido en estado borrador)
@@ -107,7 +108,7 @@ Si el navegador bloquea LocalStorage (modo privado estricto), `crearAlmacenamien
 | Zonas táctiles de 44 × 44 px como mínimo | `styles.css` | Selección de cantidades en móvil |
 | Región `role="status"` / `aria-live` para avisos | `Avisos.js` | Visibilidad de mensajes |
 | Selector de cantidad − / campo / +, con límites y error junto al campo | `SelectorCantidad.js` | Selección de cantidades, recuperación de errores |
-| Eliminar sin confirmación previa pero con **Deshacer** durante 10 s | `main.js`, `EliminarDelCarrito` | Eliminación accidental |
+| Eliminar y cancelar sin confirmación previa pero con **Deshacer** durante 10 s | `main.js`, `EliminarDelCarrito`, `CancelarPedido` | Eliminación accidental |
 | Diálogo "Revisa tu pedido" antes de confirmar | `main.js` | Confirmación de pedido |
 | Mensajes de error que dicen qué pasó y cómo seguir | `domain/*` | Recuperación de errores |
 | Foco gestionado: después de agregar vuelve al botón; después de eliminar pasa a la línea siguiente; al confirmar va al título "Pedido confirmado" | `main.js` | Orientación del usuario |
