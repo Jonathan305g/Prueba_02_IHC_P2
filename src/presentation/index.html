@@ -22,6 +22,9 @@
     </div>
   </header>
 
+  <p class="contenedor modo-memoria" data-js="modo-memoria" role="status" hidden>El almacenamiento está bloqueado. Puedes usar la aplicación, pero los pedidos se perderán al recargar o cerrar esta página.</p>
+  <div class="avisos contenedor" data-js="avisos" role="status" aria-live="polite" aria-atomic="true"></div>
+
   <main id="contenido" class="contenedor disposicion">
     <section class="catalogo" aria-labelledby="catalogo-titulo">
       <h2 id="catalogo-titulo" tabindex="-1">Catálogo</h2>
@@ -47,6 +50,7 @@
 
     <section class="carrito" aria-labelledby="carrito-titulo" data-js="carrito">
       <h2 id="carrito-titulo" tabindex="-1">Tu pedido</h2>
+      <div class="recuperacion" data-js="recuperacion" hidden></div>
       <div data-js="carrito-contenido"></div>
     </section>
 
@@ -74,7 +78,18 @@
     </form>
   </dialog>
 
+  <dialog class="dialogo" data-js="dialogo-cancelar" aria-labelledby="cancelar-titulo" aria-describedby="cancelar-explicacion">
+    <form method="dialog" class="dialogo__cuerpo">
+      <h2 id="cancelar-titulo">¿Vaciar tu pedido?</h2>
+      <p id="cancelar-explicacion">Se quitarán todos los productos. Podrás deshacerlo mientras permanezcas en esta página y no modifiques el pedido.</p>
+      <div class="dialogo__acciones">
+        <button value="conservar" class="boton boton--secundario" autofocus>Conservar pedido</button>
+        <button value="vaciar" class="boton boton--peligro">Sí, vaciar pedido</button>
+      </div>
+    </form>
+  </dialog>
+
   <!-- Mensajes del sistema: el lector de pantalla los anuncia sin mover el foco. -->
-  <div class="avisos" data-js="avisos" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>
+

@@ -3,6 +3,7 @@
 // así las pruebas automatizadas usan la versión en memoria.
 
 export class AlmacenamientoEnMemoria {
+  modo = 'memoria';
   #datos = new Map();
   leer(clave) {
     return this.#datos.has(clave) ? structuredClone(this.#datos.get(clave)) : null;
@@ -16,40 +17,52 @@ export class AlmacenamientoEnMemoria {
 }
 
 export class AlmacenamientoLocal {
-  constructor(prefijo = 'cafeu') {
+  modo = 'local';
+  constructor(prefijo = 'cafeu', storage = globalThis.localStorage ?? globalThis.window?.localStorage) {
     this.prefijo = prefijo;
+    this.storage = storage;
   }
   leer(clave) {
     try {
-      const texto = window.localStorage.getItem(`${this.prefijo}:${clave}`);
-      return texto ? JSON.parse(texto) : null;
-    } catch {
-      return null; // navegación privada, almacenamiento bloqueado o JSON dañado
+      const texto = this.storage.getItem(`${this.prefijo}:${clave}`);
+      return texto === null ? null : JSON.parse(texto);
+    } catch (cause) {
+      throw new ErrorDeAlmacenamiento('No se pudieron leer los datos guardados. Revisa los permisos del navegador y vuelve a intentarlo.', cause);
     }
   }
   escribir(clave, valor) {
     try {
-      window.localStorage.setItem(`${this.prefijo}:${clave}`, JSON.stringify(valor));
-    } catch {
-      // Si no se puede guardar, la app sigue funcionando en memoria durante la sesión.
+      this.storage.setItem(`${this.prefijo}:${clave}`, JSON.stringify(valor));
+    } catch (cause) {
+      throw new ErrorDeAlmacenamiento('No se pudo guardar el cambio. Tu pedido anterior se conserva. Libera espacio o habilita el almacenamiento y vuelve a intentarlo.', cause);
     }
   }
   borrar(clave) {
     try {
-      window.localStorage.removeItem(`${this.prefijo}:${clave}`);
-    } catch {
-      /* sin acción */
+      this.storage.removeItem(`${this.prefijo}:${clave}`);
+    } catch (cause) {
+      throw new ErrorDeAlmacenamiento('No se pudo borrar el dato guardado. El cambio no se aplicó.', cause);
     }
+  }
+}
+
+export class ErrorDeAlmacenamiento extends Error {
+  constructor(mensaje, cause) {
+    super(mensaje, { cause });
+    this.name = 'ErrorDeAlmacenamiento';
+    this.codigo = 'ALMACENAMIENTO_NO_DISPONIBLE';
   }
 }
 
 export function crearAlmacenamiento() {
   try {
     const prueba = '__cafeu_prueba__';
-    window.localStorage.setItem(prueba, '1');
-    window.localStorage.removeItem(prueba);
-    return new AlmacenamientoLocal();
+    const local = new AlmacenamientoLocal();
+    local.escribir(prueba, 1);
+    local.borrar(prueba);
+    return local;
   } catch {
     return new AlmacenamientoEnMemoria();
   }
 }
+

@@ -1,12 +1,16 @@
 {
   "name": "cafeu-ihc-integrador",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "CaféU 2.0: app web de pedidos para la cafetería universitaria (Prueba integradora IHC, UTA-FISEI)",
   "type": "module",
   "private": true,
   "scripts": {
     "start": "node scripts/servidor.js",
-    "test": "node --test"
+    "test": "node --test",
+    "metricas": "node scripts/metricas.js",
+    "comprobar": "node scripts/verificar-entrega.js",
+    "test:ui": "node tests/navegador/verificar-ui.mjs",
+    "comparar:v1": "node scripts/comparar-v1.mjs"
   },
   "engines": {
     "node": ">=20"
