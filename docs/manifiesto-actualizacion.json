@@ -1,0 +1,536 @@
+{
+  "repositorio_base": "https://github.com/Jonathan305g/Prueba_02_IHC_P2",
+  "commit_base": "4d9037e30f174e8f78f7e42dfad25fde2dfdf456",
+  "version": "2.0.1",
+  "subida_prevista": "William Martinez, una rama de actualizacion",
+  "archivos": [
+    {
+      "ruta": ".github/workflows/pruebas.yml",
+      "estado": "nuevo",
+      "sha256": "d5ab21b7a38daa7a2c8cb1a1d926efe09d2314e5b0a63285bdd846fb3982d5ed"
+    },
+    {
+      "ruta": ".gitignore",
+      "estado": "conservado",
+      "sha256": "77a805dd7b79fd4f3d7b9ebfe569d60f1b2349f4b692615b4fecc3d1d7b79f61"
+    },
+    {
+      "ruta": "LEEME.txt",
+      "estado": "nuevo",
+      "sha256": "219c83191dbc8ad9f68fd53904a0fbaedb4d5c23bd99a39280c0f7f7ab2eb1eb"
+    },
+    {
+      "ruta": "README.md",
+      "estado": "modificado",
+      "sha256": "c7141e7e88026570ef8c4c8569bf1652e86f5c669de05fb7e406ec2039298249"
+    },
+    {
+      "ruta": "docs/analisis-ux.md",
+      "estado": "modificado",
+      "sha256": "3d095c2d92dcbcd978534f06768b9301b85122da6e7342e08ea8423e2353734b"
+    },
+    {
+      "ruta": "docs/arquitectura.md",
+      "estado": "modificado",
+      "sha256": "11a674854c33548152099774fc1a106c075067733ee334fdf98cfe71ba97527e"
+    },
+    {
+      "ruta": "docs/base-v1.json",
+      "estado": "nuevo",
+      "sha256": "1c53fed85027820a5271efe2dbea49766e1227d6cf008e7e2728d0ed70822b6c"
+    },
+    {
+      "ruta": "docs/base-v1.md",
+      "estado": "nuevo",
+      "sha256": "b93a741bb4b34b87460ea9e176d13b87a0a0aabb07a8a09370fa105ac4cf9ef5"
+    },
+    {
+      "ruta": "docs/cambios-2.0.1.md",
+      "estado": "nuevo",
+      "sha256": "c1b132042e0528bd9ff1f71438cbb480513f516932fea9dba9f88380bfdb482d"
+    },
+    {
+      "ruta": "docs/control-entrega.md",
+      "estado": "nuevo",
+      "sha256": "8ed82baf24df644fb8924b658258705e11513430696c292bb8a5129083d192ae"
+    },
+    {
+      "ruta": "docs/enunciado/Prueba_Practica_Integradora_IHC_CafeU_2_Puntos.pdf",
+      "estado": "nuevo",
+      "sha256": "a5c46ece4ba3156420624a0f8a2deef6eec375c1d051c9725af935475468e414"
+    },
+    {
+      "ruta": "docs/guia-actualizacion.md",
+      "estado": "nuevo",
+      "sha256": "a93e051e7d1f2b7627eee003e83bb480d082ec53257024863ebe9467a6343531"
+    },
+    {
+      "ruta": "docs/requisitos.md",
+      "estado": "modificado",
+      "sha256": "efb4343ba89a16f2c001e3afccf9664825d732e3cec00b251fb19e4c104ea5ac"
+    },
+    {
+      "ruta": "docs/sitemap.md",
+      "estado": "modificado",
+      "sha256": "364eba667a804e16547f7293720430163810428b780f09bc76106844cf981c48"
+    },
+    {
+      "ruta": "docs/trazabilidad.md",
+      "estado": "modificado",
+      "sha256": "c4143e46f613f83020342fa5055d2a934a6fc056d57d2ee5647aaeda6c2a69dc"
+    },
+    {
+      "ruta": "docs/user-flow.md",
+      "estado": "modificado",
+      "sha256": "a8bd465e983aa7a1412859653deef603ec708e5374b1eaa816e3b3237741af1b"
+    },
+    {
+      "ruta": "evaluacion/.gitkeep",
+      "estado": "conservado",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "evaluacion/accesibilidad.md",
+      "estado": "modificado",
+      "sha256": "4abd242bfbc7d22432f60ed58b7cb6037d595cc15b7436b207d9f534f350b8de"
+    },
+    {
+      "ruta": "evaluacion/antecedentes/accesibilidad-v1.md",
+      "estado": "nuevo",
+      "sha256": "f9446439dfd61f4b2df36304d3dad08089cb0a0243c6fbb98128d6d1d1817d9e"
+    },
+    {
+      "ruta": "evaluacion/antecedentes/heuristicas-v1.md",
+      "estado": "nuevo",
+      "sha256": "2c471ee308d27754437a12838078b1c58fd4e19ba622365d8f7769950705dddd"
+    },
+    {
+      "ruta": "evaluacion/backlog.md",
+      "estado": "modificado",
+      "sha256": "e72b73a48670e389b8239660d4607cbac1a6a118501834a70b2adf855a95af66"
+    },
+    {
+      "ruta": "evaluacion/consentimiento.md",
+      "estado": "conservado",
+      "sha256": "54feddffcb7bce6727c3b680cdecd4228bebbbb8ee050944e1a7ce923a51f460"
+    },
+    {
+      "ruta": "evaluacion/cuestionario.md",
+      "estado": "conservado",
+      "sha256": "1c02348246b86b5308675deeeb6160a5d5f560f319ceb0324d2c5465112ee387"
+    },
+    {
+      "ruta": "evaluacion/datos/CafeU_Recoleccion_Pruebas_Completo.xlsx",
+      "estado": "nuevo",
+      "sha256": "846abeae2610084fa63001617c12f57e3822fd1ec059443081c02be38138e82a"
+    },
+    {
+      "ruta": "evaluacion/datos/observaciones.json",
+      "estado": "nuevo",
+      "sha256": "fbcd9ac379256f69db4262f5094ee88f37c614ac1fe856aa896feee21c5db7c5"
+    },
+    {
+      "ruta": "evaluacion/hallazgos.md",
+      "estado": "modificado",
+      "sha256": "436a43bceff4f67bd9b92ec7fa8ced3c3e837c256881aa1e0b8e032299ea33b1"
+    },
+    {
+      "ruta": "evaluacion/heuristicas.md",
+      "estado": "modificado",
+      "sha256": "e7b6cf900c75c5a2c822ec85f23fe38f4b4c175c66a2030d081b24eb39d183a6"
+    },
+    {
+      "ruta": "evaluacion/hoja-observacion.md",
+      "estado": "conservado",
+      "sha256": "bc9914147f468c6f0921545e6276776702760d312579f0e69ee1a286b2d5e177"
+    },
+    {
+      "ruta": "evaluacion/metricas.json",
+      "estado": "nuevo",
+      "sha256": "70c9c548cca34139d17ff26505f6616dfad5ce26fdd02c623b6c5921c73e546e"
+    },
+    {
+      "ruta": "evaluacion/metricas.md",
+      "estado": "modificado",
+      "sha256": "97788ab4bcd70804200d9fd66dedab312f0a6fff7d7e615f7e8b3b61563b11e7"
+    },
+    {
+      "ruta": "evaluacion/piloto.md",
+      "estado": "modificado",
+      "sha256": "d54e7f46fb013d2bd9d47fdea2397fb4d762f95c276911e60afc38c87085ffe4"
+    },
+    {
+      "ruta": "evaluacion/plan.md",
+      "estado": "modificado",
+      "sha256": "9bb4b566640391626fe5a08dc6b0e4dbe862a362742026e1cc0c5a165176a6a0"
+    },
+    {
+      "ruta": "evaluacion/recorrido-cognitivo.md",
+      "estado": "modificado",
+      "sha256": "ac9a415cda1c6090bba70a712816fb41b40c1ec0371ff744891df2ded61cdf11"
+    },
+    {
+      "ruta": "evaluacion/resultados.csv",
+      "estado": "modificado",
+      "sha256": "46d9587e503ec2c9eeea7249c7f2530c2bc8b5502ccdbbe73359872b40e60080"
+    },
+    {
+      "ruta": "evaluacion/sesiones/LEEME.txt",
+      "estado": "modificado",
+      "sha256": "2720de5df612856c34a17e6da90b895f1442f02c1cf6f9bc7e60c15613dd704a"
+    },
+    {
+      "ruta": "evaluacion/sesiones.csv",
+      "estado": "nuevo",
+      "sha256": "cdf808d5528d0dd2f6d8d1a5b76dc68c5d81c4465620e443f79c95ed9e025fac"
+    },
+    {
+      "ruta": "evaluacion/sus.csv",
+      "estado": "modificado",
+      "sha256": "9915b71afb873e3237b83f6bedd34d933ed71cfb4a7017dbf7b4014294895412"
+    },
+    {
+      "ruta": "evaluacion/tareas.md",
+      "estado": "modificado",
+      "sha256": "4c4c3890e684c21e97f43221e9f4b24b095287364bf7bbde86ff24edb2387de3"
+    },
+    {
+      "ruta": "evaluacion/validacion-v2.md",
+      "estado": "nuevo",
+      "sha256": "1ee4a598cad7e303a39c52a55b18e6ef5ca985396c9ae55d4dc07be1a2f9b323"
+    },
+    {
+      "ruta": "evidencias/README.md",
+      "estado": "nuevo",
+      "sha256": "37d5559d6572188dfae4910fe63fd50f76e9896a2e0285b8f69513ba7f801119"
+    },
+    {
+      "ruta": "evidencias/antes/.gitkeep",
+      "estado": "conservado",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "evidencias/antes/H01.png",
+      "estado": "conservado",
+      "sha256": "aa2f8658cbb1fdd3190fac028f7815381386eabd97854459e6bc2322a90f03ef"
+    },
+    {
+      "ruta": "evidencias/antes/H02.png",
+      "estado": "conservado",
+      "sha256": "d5083d47c59565d39a0896b2537af20090847dab38b5124ffa4444cce37ca1b4"
+    },
+    {
+      "ruta": "evidencias/antes/H03.png",
+      "estado": "conservado",
+      "sha256": "4f11ab437c7929e4e4a8d1b1f2a3e7e7e80e9f80152b458ee11656382ff87725"
+    },
+    {
+      "ruta": "evidencias/antes/H04.png",
+      "estado": "conservado",
+      "sha256": "4a7a98bcf9c38539f39627dac6ffd4aaf630e1674250f30ab837bc34f4bc969a"
+    },
+    {
+      "ruta": "evidencias/antes/H05.png",
+      "estado": "conservado",
+      "sha256": "51d80e8c710e0bf72bdd724e57edcf2813f5b576e9adb2aded0f358627a97929"
+    },
+    {
+      "ruta": "evidencias/despues/.gitkeep",
+      "estado": "conservado",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "evidencias/despues/README.md",
+      "estado": "nuevo",
+      "sha256": "88c819b0f514a144b678f413d33325e15f0aaf117685b051d0a5cf27160534ac"
+    },
+    {
+      "ruta": "evidencias/verificacion/README.md",
+      "estado": "nuevo",
+      "sha256": "36f9567fcf55af269fdf9acb178da836f6b6586b33f060ef12ffc34ebb8ec26d"
+    },
+    {
+      "ruta": "evidencias/verificacion/base-v1.json",
+      "estado": "nuevo",
+      "sha256": "72d0ba4978e68cb787230d8a442e20d60223cca4abe5a804abcfabd013039efa"
+    },
+    {
+      "ruta": "evidencias/verificacion/contraste.json",
+      "estado": "nuevo",
+      "sha256": "fe2511ffc3cd97ce87ac097c8b47c80c3ed8cceba0e209bf6bdbc96f53a8453c"
+    },
+    {
+      "ruta": "evidencias/verificacion/navegador.json",
+      "estado": "nuevo",
+      "sha256": "a2f3398fd5995241e7ba41ddf7d0e85f19f2e5552423d516fd5393f7563bab16"
+    },
+    {
+      "ruta": "evidencias/verificacion/node-tests.tap",
+      "estado": "nuevo",
+      "sha256": "e86ea10e215c07b623c99378eea647dab5a9783f6d51bb3a8bba27a1d95d09b4"
+    },
+    {
+      "ruta": "evidencias/verificacion/node-v1.txt",
+      "estado": "nuevo",
+      "sha256": "f951e2a6f0322bfe9ec5730b476230ef2bb6d8f363292a776be5925ad9e0e2c6"
+    },
+    {
+      "ruta": "evidencias/verificacion/persistencia-antes-despues.json",
+      "estado": "nuevo",
+      "sha256": "ff72147c3191cbe04459faebfd221f29ac50fb3e69414b876a0c4548c3e02f09"
+    },
+    {
+      "ruta": "package.json",
+      "estado": "modificado",
+      "sha256": "4af367210e7f309195476e780b58a562a818721bdc8a4e0f7f28e0539b817f68"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-01-catalogo.png",
+      "estado": "conservado",
+      "sha256": "959a1fd3c6d6ee1ff109a3bdac03d549e6effaca672b1dc48fe05a2e432511cf"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-02-carrito.png",
+      "estado": "conservado",
+      "sha256": "9b3444d3ea4b35e20b1f7600e6462af7a3d18eff6be24e73210cde7bfb983e4d"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-03-eliminar-deshacer.png",
+      "estado": "conservado",
+      "sha256": "c4cf7e675339425cd13722fb021745dbc897e43cab697c5a20717f5fd574cbbb"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-04-revisar.png",
+      "estado": "conservado",
+      "sha256": "9a7b34c704a3af908c40df36097640651c6f40ba6116a85dd80ae61409dbfe86"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-05-confirmado.png",
+      "estado": "conservado",
+      "sha256": "f2b866f91ca797b19f74ce660edb69539e2231202eb533f2bdf18d5ab9c8571a"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-01-catalogo.png",
+      "estado": "conservado",
+      "sha256": "d319cdb6ca56fe3e96a42c4e391a857fec9ed8a1f520e902d005568e75f2510c"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-02-carrito.png",
+      "estado": "conservado",
+      "sha256": "b084765314ad27810632e52eb8b3f5c324a9817a84030cf92109bdf8022b660d"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-03-eliminar-deshacer.png",
+      "estado": "conservado",
+      "sha256": "adb71e6a737ecb47e204d952424eb2ca74281767782669ef0802bae78fbfc81a"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-04-revisar.png",
+      "estado": "conservado",
+      "sha256": "4be0d9c1b3c89809dc62b12d9996505d943c6d91c5246e349f07bdcd986da58c"
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-05-confirmado.png",
+      "estado": "conservado",
+      "sha256": "0e98da07c3d00ff514fdf5c399be2ae1bcae019087428d728bf5a9182d40ee21"
+    },
+    {
+      "ruta": "prototipos/wireframes/.gitkeep",
+      "estado": "conservado",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "prototipos/wireframes/01-catalogo.png",
+      "estado": "nuevo",
+      "sha256": "8605101e69adf0ebf289a9619152d1f5f642442480af60c09686826fcbaa5230"
+    },
+    {
+      "ruta": "prototipos/wireframes/01-catalogo.svg",
+      "estado": "nuevo",
+      "sha256": "a6ebce292a02cd220c55031f55308bcd94beb4b18722f97b6829e87691de5d3c"
+    },
+    {
+      "ruta": "prototipos/wireframes/02-carrito.png",
+      "estado": "nuevo",
+      "sha256": "52ffc4cf6523cea45ed3748467c839e713938095720c25332677fc24357f95f2"
+    },
+    {
+      "ruta": "prototipos/wireframes/02-carrito.svg",
+      "estado": "nuevo",
+      "sha256": "0d16da9375236787a8b87808c8a7900cad1b277b59219fa6a0a0de6346e8e11f"
+    },
+    {
+      "ruta": "prototipos/wireframes/03-revision.png",
+      "estado": "nuevo",
+      "sha256": "09d57a91e0ae03384d721a290164721502caf92400cb214b24401e0ee7483e6b"
+    },
+    {
+      "ruta": "prototipos/wireframes/03-revision.svg",
+      "estado": "nuevo",
+      "sha256": "026a943964e479c55f8a0fd91e7889d92a73e7b2c3d2dcc6f872bf7a3c4c43cb"
+    },
+    {
+      "ruta": "prototipos/wireframes/README.md",
+      "estado": "modificado",
+      "sha256": "c10c6a3c2b7153c61da9ab74992d524e0093bd530ca560ac8fa94c4039d7a644"
+    },
+    {
+      "ruta": "scripts/comparar-v1.mjs",
+      "estado": "nuevo",
+      "sha256": "8379168e9e71fd503957bebe0aa3b3d28744c19ba10e467038e1884b2e411ab9"
+    },
+    {
+      "ruta": "scripts/lib/metricas.js",
+      "estado": "nuevo",
+      "sha256": "b98afce888f6ab351047ab753669c5a0da26046b827465dd123a018e043124bf"
+    },
+    {
+      "ruta": "scripts/metricas.js",
+      "estado": "nuevo",
+      "sha256": "df8089fc4fca002135ea3f914577905648705a08593864cd15936bdac15964f1"
+    },
+    {
+      "ruta": "scripts/servidor.js",
+      "estado": "conservado",
+      "sha256": "1dcf32904d98ba5ef0f42c27ed591b0d1e432e1f91443ee92923f982a6840bbe"
+    },
+    {
+      "ruta": "scripts/verificar-entrega.js",
+      "estado": "nuevo",
+      "sha256": "8a6617b0806373f592154f1a171eb235072af51b7a1051b2a296253cdb71f9b3"
+    },
+    {
+      "ruta": "src/application/casosDeUso.js",
+      "estado": "modificado",
+      "sha256": "64a3891f7f5daee416143435bec7d6bb90537b7a90f26328149694c3c117a976"
+    },
+    {
+      "ruta": "src/domain/DetallePedido.js",
+      "estado": "conservado",
+      "sha256": "589f48acf7ad93e4f697a7e729338eb5d7672cbc9c4d6dec2ce0c24fae0d8946"
+    },
+    {
+      "ruta": "src/domain/Pedido.js",
+      "estado": "conservado",
+      "sha256": "f8a3de8227432ec23cb4d27e332cb94d9bcb7f7feb8505c409577123ac47fe95"
+    },
+    {
+      "ruta": "src/domain/Producto.js",
+      "estado": "modificado",
+      "sha256": "b3ef4c1695851d9b72580fd5352fd9e577abd4eebb0b1e4816b31d8e0fcd81ae"
+    },
+    {
+      "ruta": "src/domain/errores.js",
+      "estado": "conservado",
+      "sha256": "d5de6258af7e230d583841fa3d074391b6a01f734a337bd5014b1bd898d98954"
+    },
+    {
+      "ruta": "src/domain/texto.js",
+      "estado": "modificado",
+      "sha256": "d98265d940ffe6b08ca17b31282338cc7cfe79d4b7586a410871ae4169ff2202"
+    },
+    {
+      "ruta": "src/infrastructure/almacenamiento.js",
+      "estado": "modificado",
+      "sha256": "0d4f6d883eccb5985f617e99df560c525302d7d5ee18a3a196b463cf3ad89f82"
+    },
+    {
+      "ruta": "src/infrastructure/data/productos.js",
+      "estado": "conservado",
+      "sha256": "f1e138092f4d6ada3bc6a303f5706306fd8f69873e6166c2b5acb221997130f0"
+    },
+    {
+      "ruta": "src/infrastructure/repositorios.js",
+      "estado": "modificado",
+      "sha256": "a3378aad24d4df54e4b72ffbfa075e11344616e282a5cd9b908b661f532a83ff"
+    },
+    {
+      "ruta": "src/presentation/components/Avisos.js",
+      "estado": "modificado",
+      "sha256": "15967f5dfad419d9358f1b07b63759f6f5027cb57d8b673a3323496d02c33bcf"
+    },
+    {
+      "ruta": "src/presentation/components/Carrito.js",
+      "estado": "conservado",
+      "sha256": "d984b7548d421f441d05b8d8958e19e72887536dba89f4cd2206b36b7258437a"
+    },
+    {
+      "ruta": "src/presentation/components/SelectorCantidad.js",
+      "estado": "modificado",
+      "sha256": "fcb2543bdc0261e003b76076ff423884a466bae556a01e7def42db47322e65e4"
+    },
+    {
+      "ruta": "src/presentation/components/TarjetaProducto.js",
+      "estado": "conservado",
+      "sha256": "593b54d7bb68c4d5a33caf01c1a81ee39beae4bf111b84d5a47640bde61439d1"
+    },
+    {
+      "ruta": "src/presentation/components/formato.js",
+      "estado": "conservado",
+      "sha256": "5193416c9ca1cb7804091326075cca6994ddc8868e1c8effc3a9a15dc8a6d39f"
+    },
+    {
+      "ruta": "src/presentation/index.html",
+      "estado": "modificado",
+      "sha256": "914f0836d8f1b541e5cf1c24185025af95b7dc68a3b88eb1ae804b4549d66b75"
+    },
+    {
+      "ruta": "src/presentation/main.js",
+      "estado": "modificado",
+      "sha256": "5f1a7a28dccbf5f899282037b072720421d17d0f18484eec770542215da3ff2b"
+    },
+    {
+      "ruta": "src/presentation/styles.css",
+      "estado": "modificado",
+      "sha256": "4ff902478613272db91a3eca7d55bd11c76661a24aa5991156aab2660dde98ab"
+    },
+    {
+      "ruta": "tests/navegador/verificar-ui.mjs",
+      "estado": "nuevo",
+      "sha256": "750d0032423f24c486a7324f9b7c25ca730621cae4bdd1c8cdd1a1291cee52e6"
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/humo.test.js",
+      "estado": "conservado",
+      "sha256": "49f96363b37599e44c16e96ced4493ae54082ff01cc7da48862a5b5db6538427"
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/metricas.test.js",
+      "estado": "nuevo",
+      "sha256": "f4cc25077b7e44859c2ec723068ae5ef16666d0feea3fbacfcf17d93a7e35e9b"
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/persistencia-regresion.test.js",
+      "estado": "nuevo",
+      "sha256": "9ccb6e80ddc354c791e274cc74eb421609865bc677b19b8d0ce60c07a6affcc6"
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/t1-buscar-agregar.test.js",
+      "estado": "conservado",
+      "sha256": "dce62fc311aedad9841e469ecf8f7a064a24334562dd5d126da3d7f3d4e28b16"
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/t2-cantidad-total.test.js",
+      "estado": "conservado",
+      "sha256": "e4b5b004a68c6b0fa58cafeb580ab5caf876042dd1e93b5806d129b6d9d388e8"
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/t3-eliminar-confirmar.test.js",
+      "estado": "conservado",
+      "sha256": "1766019507462fb86b07cf863f23fb40aa39326ec542e09ccb84ca4c846aa495"
+    }
+  ],
+  "verificacion": {
+    "archivos_v1": 66,
+    "pruebas_v1": 15,
+    "pruebas_actualizacion": 26,
+    "fallos": 0,
+    "enlaces_locales": 98,
+    "excel_original_conservado": true,
+    "pruebas_con_usuarios": "Realizadas y registradas en el Excel, confirmado por William Martinez"
+  },
+  "limites": [
+    "Revision tecnica visual ejecutada posteriormente en Google Chrome (15/15 aprobadas, 10 capturas en evidencias/despues/); ver evidencias/verificacion/navegador.json.",
+    "El campo de version V2 se conserva como figura en el Excel; no se asigna un commit ausente del registro."
+  ]
+}

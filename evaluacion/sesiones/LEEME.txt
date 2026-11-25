@@ -1,1 +1,5 @@
-Fotos de consentimientos y hojas de observación llenas (P00, P01, P02).
+Los registros aportados se conservan en evaluacion/datos/CafeU_Recoleccion_Pruebas_Completo.xlsx y en observaciones.json.
+resultados.csv, sus.csv y sesiones.csv son exportaciones regenerables con npm run metricas.
+P00 es piloto; P01/P02 son usuarios externos segun el archivo. No se adjuntaron capturas de las sesiones.
+No publicar nombres, firmas, cedulas ni consentimientos personales. Mantener las firmas en custodia privada del equipo.
+Pruebas con usuarios realizadas y documentadas en el Excel, confirmado por William Martinez. Conservar el campo de version original sin asignarle un commit que no figure en el registro. No se solicita repetir las sesiones.

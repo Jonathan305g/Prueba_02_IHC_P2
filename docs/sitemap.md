@@ -1,6 +1,6 @@
 # Sitemap
 
-CaféU 2.0 funciona en una sola página (`src/presentation/index.html`) organizada por secciones, un diálogo modal de revisión y la vista de confirmación de pedido.
+CaféU 2.0 funciona en una sola página (`src/presentation/index.html`) organizada por secciones, dos diálogos modales (revisión y vaciado) y la vista de confirmación de pedido.
 
 ```mermaid
 flowchart TD
@@ -16,6 +16,8 @@ flowchart TD
   C --> C1[Líneas · selector de cantidad y Eliminar]
   C --> C2[Totales · artículos y total]
   C --> C3[Cancelar pedido]
+  C3 --> F[Diálogo de vaciado · Conservar o vaciar]
+  F --> C
   C --> D[Diálogo modal · Revisa tu pedido]
 
   D -->|Volver y editar| C

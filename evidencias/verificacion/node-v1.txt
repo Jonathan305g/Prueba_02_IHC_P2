@@ -1,0 +1,28 @@
+
+> cafeu-ihc-integrador@1.0.0 test
+> node --test
+
+✔ la app arranca con catálogo cargado y carrito vacío (1.924191ms)
+✔ "CAFE", "café" y "cafe leche" encuentran Café con leche (2.275237ms)
+✔ "sanduche" encuentra Sánduche mixto (0.591028ms)
+✔ agregar un producto deja cantidad 1 en el carrito (1.766563ms)
+✔ agregar el mismo producto dos veces suma la cantidad (1.485601ms)
+✔ un producto agotado no se puede agregar (1.45748ms)
+✔ cambiar a 3 cafés con leche deja el total en 3,00 (3.160487ms)
+✔ con 3 cafés con leche y 1 sánduche mixto el total es 4,75 (0.748224ms)
+✔ la cantidad 0 se rechaza y el carrito no cambia (1.697209ms)
+✔ la cantidad 21 se rechaza y el carrito no cambia (0.756126ms)
+✔ la cantidad 2.5 se rechaza y el carrito no cambia (0.66551ms)
+✔ eliminar y deshacer devuelve la línea a la misma posición (4.448852ms)
+✔ cancelar el pedido y deshacer recupera todas las líneas (2.435338ms)
+✔ no se puede confirmar un pedido vacío (1.712041ms)
+✔ confirmar guarda el pedido en el historial y vacía el carrito (5.250306ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 200.14618
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.

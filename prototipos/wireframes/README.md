@@ -1,11 +1,17 @@
-# Wireframes
+# Tres wireframes de baja fidelidad
 
-| Archivo | Pantalla | Estados representados |
+| Boceto | Flujo y elementos | Trazabilidad |
 |---|---|---|
-| wf-01-catalogo.png | Catálogo y búsqueda | << normal, búsqueda sin resultados, producto agotado >> |
-| wf-02-carrito.png | Carrito | << vacío, con productos, error de cantidad, aviso con Deshacer >> |
-| wf-03-confirmacion.png | Revisión y confirmación | << diálogo de revisión, pedido confirmado con número >> |
+| [01 Catálogo](01-catalogo.svg) | Búsqueda, categorías, disponibilidad, precio y Agregar | RF01–RF03, T1 |
+| [02 Carrito](02-carrito.svg) | Cantidad, total, eliminación, Deshacer y error | RF04–RF05, T2–T3 |
+| [03 Revisión](03-revision.svg) | Resumen, volver/confirmar y prevención del vaciado | RF05–RF06, T3 |
 
-<< Para cada wireframe: 2 o 3 líneas sobre qué decisiones de diseño tomaste (jerarquía, ubicación del total, tamaño de botones para el pulgar, etc.). >>
+Son bocetos elaborados para completar la documentación de esta actualización a partir de requisitos y del código. No se presentan como diseños fechados antes de la implementación ni como capturas de sesiones. Las imágenes de la aplicación base están en `../version-v1/`.
 
-Las capturas de la versión implementada están en `../version-v1/`.
+## Vistas de los bocetos
+
+![Catálogo](01-catalogo.png)
+
+![Carrito](02-carrito.png)
+
+![Revisión](03-revision.png)

@@ -1,25 +1,14 @@
-# CaféU 2.0
+# CaféU 2.0 · Actualización 2.0.1
 
-Aplicación web para la cafetería universitaria: consultar productos, armar un pedido y confirmarlo. Es la prueba práctica integradora de Interacción Humano-Computador (Ingeniería de Software, quinto semestre, UTA-FISEI).
+Aplicación local de pedidos para la cafetería universitaria. Actualización preparada para que **William Martínez** la integre mediante una sola rama sobre `Jonathan305g/Prueba_02_IHC_P2`. Base: commit `4d9037e30f174e8f78f7e42dfad25fde2dfdf456`.
 
-## Equipo y reparto
+**Base V1 confirmada:** versión 1.0.0 del repositorio de Jonathan. Se verificaron sus 66 archivos y se ejecutaron sus 15 pruebas originales; esta actualización supera 26 pruebas. [Identidad y comparación de la base](docs/base-v1.md). Para empezar con el ZIP, consulta [LEEME.txt](LEEME.txt).
 
-| Integrante | Responsabilidad | Rama |
-|---|---|---|
-| Pablo Lozada | Estructura del repositorio, implementación v1 (4 capas), `docs/arquitectura.md`, README | `pablo/base-v1` |
-| William Martínez | Análisis UX y requisitos (Actividades 1 y 2): `docs/analisis-ux.md`, `docs/requisitos.md`, sitemap, user flow, trazabilidad | `william/ux-requisitos` |
-| Manuel Cuzme | Wireframes y planificación de la evaluación (Actividad 4), piloto P00 y sesiones P01/P02 (Actividad 6) | `manuel/plan-evaluacion` |
-| Emilio Abril | Evaluación heurística, recorrido cognitivo y accesibilidad (Actividad 5); métricas, hallazgos y backlog (Actividad 7) | `emilio/heuristica-metricas` |
-| Jonathan Gamboa | Pruebas automatizadas T1–T3, correcciones v2, validación v1/v2, evidencias antes/después, revisión y merge de PRs | `jonathan/pruebas-v2` |
-
-Cada integrante trabaja en su rama y abre un Pull Request hacia `main`. Otro integrante lo revisa antes de fusionarlo.
-
-## Requisitos
-
-- Node.js 20 o superior (no usa paquetes de npm).
-- Un navegador actual (Chrome, Edge o Firefox).
+El código incluye las cinco mejoras del backlog y una corrección de persistencia. El Excel recibido está conservado sin modificar y sus métricas se regeneran desde datos editables. **Las pruebas con usuarios ya se realizaron y sus resultados están en el Excel, según confirmación de William Martínez.** La comprobación técnica en navegador (`npm run test:ui`) también se ejecutó con **15/15 verificaciones aprobadas** y capturas guardadas en [evidencias/despues/](evidencias/despues/README.md). Véanse [validación](evaluacion/validacion-v2.md) y [control de entrega](docs/control-entrega.md).
 
 ## Instalación y ejecución
+
+Requisitos: Node.js 20 o superior y un navegador con módulos ES y `<dialog>`. La aplicación y las pruebas de Node no necesitan paquetes externos.
 
 ```bash
 git clone https://github.com/Jonathan305g/Prueba_02_IHC_P2.git
@@ -27,58 +16,63 @@ cd Prueba_02_IHC_P2
 npm start
 ```
 
-Abrir `http://localhost:5173`. El servidor redirige a `src/presentation/`.
+Si usas el ZIP, abre una terminal en la carpeta que contiene `package.json` y ejecuta `npm start`. Abre http://localhost:5173. Para cambiar el puerto: `$env:PORT=5174` en PowerShell o `PORT=5174 npm start` en Bash. También puede usarse Live Server sobre `src/presentation/index.html`. Los módulos no se ejecutan con doble clic mediante `file://`.
 
-También funciona con la extensión Live Server de VS Code abriendo `src/presentation/index.html`. No se puede abrir con doble clic (`file://`) porque los módulos ES necesitan un servidor.
-
-## Pruebas
+## Pruebas y métricas
 
 ```bash
 npm test
+npm run metricas
+npm run comprobar
 ```
 
-Usa el runner nativo de Node (`node --test`), que busca todos los archivos `*.test.js`. Las pruebas están en `tests/pruebas-automatizadas/`.
+[Registro de pruebas](evidencias/verificacion/node-tests.tap), [persistencia antes/después](evidencias/verificacion/persistencia-antes-despues.json), [contraste](evidencias/verificacion/contraste.json), [métricas](evaluacion/metricas.md).
+
+El guion de navegador está en [tests/navegador/verificar-ui.mjs](tests/navegador/verificar-ui.mjs). Para ejecutarlo en un equipo con Playwright: `npm install --no-save --package-lock=false playwright`, definir `CAFEU_CHROMIUM_PATH` (o instalar Chromium con `npx playwright install chromium`) y correr `npm run test:ui`. Inicia su propio servidor en el puerto 5190. Ejecutado sobre Google Chrome (`158.0.8127.88`) con **15/15 comprobaciones aprobadas**. [Estado observado](evidencias/verificacion/navegador.json).
 
 ## Funcionalidades
 
-- Catálogo por categorías con productos agotados marcados.
-- Búsqueda que ignora tildes y mayúsculas y acepta varias palabras en cualquier orden (`cafe leche`, `SANDUCHE`).
-- Carrito con selector de cantidad (botones − / + y escritura directa, de 1 a 20), subtotal por línea y total.
-- Eliminar un producto o cancelar el pedido completo, con opción **Deshacer** durante 10 segundos.
-- Revisión del pedido en un diálogo antes de confirmar; número de pedido al confirmar.
-- El carrito se guarda en LocalStorage y sobrevive a recargar la página.
-- Mobile First, navegación completa por teclado, foco visible, enlaces para saltar secciones y avisos anunciados por lector de pantalla.
+- Catálogo de 17 productos, filtros, precios y disponibilidad.
+- Búsqueda sin tildes ni distinción de mayúsculas; palabras en cualquier orden y equivalencias `expreso` / `expresso` / `espresso`.
+- Carrito, cantidades enteras 1–20, subtotales y total en USD. Advertencia de cantidad inválida mientras se escribe.
+- Eliminación con **Deshacer dentro del carrito**, sin vencimiento por segundos durante esa edición. La recuperación termina al modificar o confirmar el pedido, recargar o descartar la opción.
+- Cancelación completa con diálogo de confirmación y opción de recuperar el pedido.
+- Revisión antes de confirmar, código de pedido y almacenamiento del historial local.
+- Escritura conjunta de carrito e historial: si guardar falla, se informa el error y se conserva el pedido anterior. Modo temporal explícito si LocalStorage está bloqueado desde el inicio.
+- CSS Mobile First, controles de 44 px, etiquetas, enlaces de salto y avisos ARIA. Avisos en el flujo del documento para evitar tapar contenido.
 
 ## Arquitectura
 
-Presentación → Aplicación → Dominio ← Infraestructura. Detalle, diagramas y decisiones en [docs/arquitectura.md](docs/arquitectura.md).
+Presentación → Aplicación → Dominio; Infraestructura implementa repositorios y depende del dominio. `main.js` crea e inyecta los adaptadores. [Arquitectura y persistencia](docs/arquitectura.md).
 
-```
-cafeu-ihc-integrador/
-├── README.md
-├── docs/            analisis-ux, requisitos, arquitectura, sitemap, user-flow, trazabilidad
-├── prototipos/      wireframes/, version-v1/ (capturas de la v1)
-├── src/             presentation/, application/, domain/, infrastructure/
-├── tests/           pruebas-automatizadas/
-├── evaluacion/      plan, tareas, consentimiento, piloto, heuristicas, recorrido-cognitivo,
-│                    accesibilidad, resultados.csv, metricas, hallazgos, backlog, validacion-v2
-└── evidencias/      antes/, despues/
-```
+## Evidencias por actividad
 
-## Evidencias
-
-| Actividad | Archivos |
+| Actividad | Evidencia |
 |---|---|
-| 1. Análisis UX | [docs/analisis-ux.md](docs/analisis-ux.md) |
-| 2. Requisitos y AI | [docs/requisitos.md](docs/requisitos.md), [docs/sitemap.md](docs/sitemap.md), [docs/user-flow.md](docs/user-flow.md), [docs/trazabilidad.md](docs/trazabilidad.md) |
-| 3. Implementación | [src/](src/), [docs/arquitectura.md](docs/arquitectura.md), [tests/](tests/), [prototipos/](prototipos/) |
-| 4. Planificación | [evaluacion/plan.md](evaluacion/plan.md), [evaluacion/tareas.md](evaluacion/tareas.md), [evaluacion/consentimiento.md](evaluacion/consentimiento.md) |
-| 5. Heurística y accesibilidad | [evaluacion/heuristicas.md](evaluacion/heuristicas.md), [evaluacion/recorrido-cognitivo.md](evaluacion/recorrido-cognitivo.md), [evaluacion/accesibilidad.md](evaluacion/accesibilidad.md) |
-| 6. Pilotaje y pruebas | [evaluacion/piloto.md](evaluacion/piloto.md), [evaluacion/resultados.csv](evaluacion/resultados.csv) |
-| 7. Triangulación y v2 | [evaluacion/metricas.md](evaluacion/metricas.md), [evaluacion/hallazgos.md](evaluacion/hallazgos.md), [evaluacion/backlog.md](evaluacion/backlog.md), [evaluacion/validacion-v2.md](evaluacion/validacion-v2.md), [evidencias/](evidencias/) |
+| 1. Persona, contexto y experiencia | [Análisis UX](docs/analisis-ux.md) |
+| 2. Requisitos y arquitectura de información | [Requisitos](docs/requisitos.md), [sitemap](docs/sitemap.md), [user flow](docs/user-flow.md), [trazabilidad](docs/trazabilidad.md) |
+| 3. Arquitectura e implementación | [Código](src/presentation/index.html), [arquitectura](docs/arquitectura.md), [pruebas](tests/pruebas-automatizadas/humo.test.js) |
+| 4. Planificación | [Plan](evaluacion/plan.md), [tareas](evaluacion/tareas.md), [consentimiento](evaluacion/consentimiento.md), [cuestionario](evaluacion/cuestionario.md) |
+| 5. Inspección | [Heurísticas](evaluacion/heuristicas.md), [recorrido](evaluacion/recorrido-cognitivo.md), [accesibilidad](evaluacion/accesibilidad.md) |
+| 6. Piloto y registros | [Piloto](evaluacion/piloto.md), [Excel](evaluacion/datos/CafeU_Recoleccion_Pruebas_Completo.xlsx), [observaciones](evaluacion/datos/observaciones.json) |
+| 7. Métricas, corrección y comparación | [Métricas](evaluacion/metricas.md), [hallazgos](evaluacion/hallazgos.md), [backlog](evaluacion/backlog.md), [validación](evaluacion/validacion-v2.md) |
+| Prototipado | [Tres wireframes](prototipos/wireframes/README.md), [capturas originales de v1](prototipos/version-v1/v1-escritorio-01-catalogo.png) |
+| Actualización y entrega | [Cambios](docs/cambios-2.0.1.md), [guía de rama y commits](docs/guia-actualizacion.md), [evidencias](evidencias/README.md) |
+
+## Equipo y contribuciones
+
+| Integrante | Aporte asignado en el repositorio base |
+|---|---|
+| Pablo Lozada | Base, implementación v1, arquitectura |
+| William Martínez | UX, requisitos, arquitectura de información y trazabilidad |
+| Manuel Cuzme | Prototipado y evaluación |
+| Emilio Abril | Heurística, accesibilidad, métricas y backlog |
+| Jonathan Gamboa | Pruebas, integración y coordinación de v2 |
+
+La actualización se entrega para que William suba todos sus archivos. La asignación original no demuestra por sí sola la ejecución de cada actividad; los commits y revisiones existentes en GitHub son la evidencia de colaboración. No se crean contribuciones ni aprobaciones ficticias. [Guía de integración](docs/guia-actualizacion.md).
 
 ## Limitaciones
 
-- Los datos viven en el navegador (LocalStorage). No hay servidor, pagos ni cuentas de usuario; el pedido confirmado no llega a una cocina real.
-- El catálogo es fijo (`src/infrastructure/data/productos.js`). La arquitectura permite cambiarlo por una API sin tocar dominio ni aplicación.
-- La evaluación con usuarios se hizo con una muestra pequeña (P01 y P02). Las métricas son descriptivas y no se pueden generalizar.
+Los datos son propios de este navegador y origen (protocolo, host y puerto); no hay cuentas, pagos, envío a cocina ni sincronización entre dispositivos. No se resuelven ediciones simultáneas en varias pestañas. El modo en memoria dura hasta recargar. La migración conserva las claves antiguas como respaldo; si el almacenamiento está lleno, la operación se rechaza sin afirmar éxito. Los datos dañados se informan y no se borran automáticamente: conserva una copia antes de restablecer el sitio.
+
+P01/P02 son dos personas y las conclusiones son descriptivas. El archivo declara que repiten en V2; puede existir aprendizaje. El campo de versión V2 y los códigos anotados se conservan tal como constan en el Excel; no se les asigna un commit que no figure en el registro. No se recibieron capturas de las sesiones con participantes; en `evidencias/despues/` constan las 10 capturas técnicas de la verificación automatizada en navegador.

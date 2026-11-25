@@ -33,9 +33,11 @@ Mateo interactúa con la aplicación de pie, caminando por los pasillos o espera
 | Momento | Touchpoint | Por qué es crítico | Cómo responde la app |
 |---|---|---|---|
 | MV1 | TP2 · Búsqueda y disponibilidad | Si el estudiante busca rápido sin tildes o intenta pedir algo agotado y no recibe una respuesta clara e inmediata, asume que no hay producto o que el sistema falló y abandona el flujo | Normaliza tildes y mayúsculas (`normalizarTexto`) aceptando palabras en cualquier orden con debounce de 200 ms; muestra conteo de resultados o sugerencia si no hay coincidencias; marca `Agotado` sin botón `Agregar` y anuncia el agregado en un aviso `aria-live` con el total |
-| MV2 | TP3–TP4 · Control de cambios y confirmación | Al ajustar cantidades con prisa, borrar algo por error o revisar cuánto va a pagar, cualquier pérdida de información o error críptico genera desconfianza | Valida cantidades enteras entre 1 y 20 mostrando el error junto al campo y restaurando el valor válido previo; ofrece `Deshacer` durante 10 segundos tras eliminar o cancelar; persiste en `localStorage` (`cafeu:carrito`) y presenta el diálogo `Revisa tu pedido` antes de confirmar |
+| MV2 | TP3–TP4 · Control de cambios y confirmación | Al ajustar cantidades con prisa, borrar algo por error o revisar cuánto va a pagar, cualquier pérdida de información o error críptico genera desconfianza | Valida cantidades enteras entre 1 y 20 mostrando el error junto al campo y restaurando el valor válido previo; ofrece `Deshacer` dentro del carrito sin plazo por segundos durante la edición; persiste en `localStorage` (`cafeu:estado-v2`) y presenta el diálogo `Revisa tu pedido` antes de confirmar |
 
 ## Curva emocional
+
+Modelo de experiencia esperada para la persona de diseño; no es una medición recolectada ni una transcripción de P01/P02. La persona Mateo es una herramienta de diseño, no el nombre de un participante.
 
 Escala de -2 (muy negativo) a +2 (muy positivo).
 
@@ -58,10 +60,10 @@ xychart-beta
 
 ## Matriz de problemas
 
-| ID | Problema observado | Heurística de Nielsen | Principio de Gestalt | Cómo lo atiende la v1 |
+| ID | Problema observado | Heurística de Nielsen | Principio de Gestalt | Cómo lo atiende la actualización |
 |---|---|---|---|---|
-| PR1 | Mensajes poco visibles | H1 · Visibilidad del estado del sistema | Figura-fondo y Proximidad | Región `role="status"` (`aria-live="polite"`) en `Avisos.js` fija en pantalla con colores semánticos (`exito`, `error`, `aviso`), botón de cierre de 44×44 px y pausa al enfocar o pasar el cursor; además de insignia en cabecera, barra inferior móvil y texto `En tu pedido: N` en cada tarjeta. |
+| PR1 | Mensajes poco visibles | H1 · Visibilidad del estado del sistema | Figura-fondo y Proximidad | Región `role="status"` (`aria-live="polite"`) en `Avisos.js` en el flujo del documento con colores semánticos (`exito`, `error`, `aviso`), botón de cierre de 44×44 px y pausa al enfocar o pasar el cursor; además de insignia en cabecera, barra inferior móvil y texto `En tu pedido: N` en cada tarjeta. |
 | PR2 | Selección de cantidades | H4 · Consistencia y estándares · H7 · Flexibilidad y eficiencia de uso | Proximidad y Región común | `SelectorCantidad.js` agrupa `−`, campo numérico (`inputmode="numeric"`, rango 1–20) y `+` con botones de al menos 44×44 px; deshabilita `−` en 1 y `+` en 20 y permite tanto toques rápidos como escritura directa. |
 | PR3 | Búsqueda de productos | H2 · Relación entre el sistema y el mundo real · H7 · Flexibilidad y eficiencia | Similitud y Proximidad | `texto.js` (`normalizarTexto`) quita tildes (NFD) y mayúsculas y evalúa todas las palabras en cualquier orden sobre nombre, descripción y categoría (`cafe leche` / `leche cafe`, `sanduche`), complementado con chips de categorías y botón `Limpiar`. |
-| PR4 | Eliminación accidental | H3 · Control y libertad del usuario · H5 · Prevención de errores | Continuidad y Cierre | `EliminarDelCarrito` y `CancelarPedido` guardan el estado anterior (incluyendo posición de la línea) y muestran un aviso durante 10 s con la acción `Deshacer`; además, el diálogo modal `Revisa tu pedido` evita confirmar la orden por accidente. |
+| PR4 | Eliminación accidental | H3 · Control y libertad del usuario · H5 · Prevención de errores | Continuidad y Cierre | `EliminarDelCarrito` y `CancelarPedido` guardan el estado anterior (incluyendo posición de la línea) y muestran una acción `Deshacer` persistente dentro del carrito durante esa edición; además, el diálogo modal `Revisa tu pedido` evita confirmar la orden por accidente. |
 | PR5 | Recuperación de errores | H9 · Ayudar a reconocer, diagnosticar y recuperarse de errores | Proximidad y Figura-fondo | Los errores de dominio indican qué ocurrió y cómo corregirlo (`La cantidad debe estar entre 1 y 20.`, `La cantidad debe ser un número entero.`), se muestran junto al campo con `aria-invalid="true"` y restauran el último valor válido; ante búsqueda sin resultados sugiere revisar la palabra o elegir `Todas`. |

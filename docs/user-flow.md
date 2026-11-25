@@ -39,21 +39,19 @@ flowchart TD
   VE -- Confirma pedido --> OK([Pedido confirmado · código CU-...])
 ```
 
-## 3. Cancelación
+## 3. Eliminación y cancelación
 
 ```mermaid
 flowchart TD
-  C0([Carrito con productos]) --> OP{¿Qué acción elige?}
-
-  OP -- Eliminar una línea --> E1[Quita el producto al instante y guarda respaldo]
-  E1 --> E2[Muestra aviso con botón Deshacer por 10 s]
-  E2 --> E3{¿Pulsa Deshacer antes de 10 s?}
-  E3 -- Sí --> E4[Restaura la línea en su posición original y muestra aviso] --> C0
-  E3 -- No / cierra aviso / confirma --> E5([Producto eliminado definitivamente])
-
-  OP -- Cancelar pedido --> K1[Vacía el carrito completo y guarda respaldo]
-  K1 --> K2[Muestra aviso con botón Deshacer por 10 s]
-  K2 --> K3{¿Pulsa Deshacer antes de 10 s y sin agregar otro?}
-  K3 -- Sí --> K4[Restaura todo el pedido anterior y muestra aviso] --> C0
-  K3 -- No / agrega otro producto --> K5([Pedido descartado · carrito vacío])
+  C[Pedido con productos] --> A{Acción}
+  A -->|Eliminar línea| E[Quitar producto y guardar recuperación]
+  A -->|Cancelar pedido| D[Diálogo de vaciado]
+  D -->|Conservar o Escape| C
+  D -->|Sí, vaciar| V[Vaciar y guardar recuperación]
+  E --> R[Deshacer dentro del carrito]
+  V --> R
+  R -->|Deshacer| C
+  R -->|Otra edición o descarte| F[Termina opción de recuperación]
 ```
+
+Sin vencimiento por segundos: la opción termina al modificar o confirmar el pedido, recargar o descartarla. Los errores de persistencia interrumpen la acción y mantienen el estado anterior; se informa cómo reintentar. La revisión de confirmación se procesa después de los cambios de cantidad en cola.

@@ -1,0 +1,337 @@
+{
+  "repositorio": "https://github.com/Jonathan305g/Prueba_02_IHC_P2",
+  "commit": "4d9037e30f174e8f78f7e42dfad25fde2dfdf456",
+  "version": "1.0.0",
+  "archivos": [
+    {
+      "ruta": ".gitignore",
+      "git_blob_sha": "aafe976d7c920c8777b9bd1557d56423ceae5e9a",
+      "bytes": 82
+    },
+    {
+      "ruta": "README.md",
+      "git_blob_sha": "c25300412d231a33e8d78b2cce46268d747c7915",
+      "bytes": 5057
+    },
+    {
+      "ruta": "docs/analisis-ux.md",
+      "git_blob_sha": "72106a23b8eaff67537f40ae70a650e97a56fdb6",
+      "bytes": 7640
+    },
+    {
+      "ruta": "docs/arquitectura.md",
+      "git_blob_sha": "bd511503b08fe203bc49f26e8a00ee2be794cf18",
+      "bytes": 6516
+    },
+    {
+      "ruta": "docs/requisitos.md",
+      "git_blob_sha": "1a915fac40cc5b42e58d538f55b1140fa7aaa35e",
+      "bytes": 6114
+    },
+    {
+      "ruta": "docs/sitemap.md",
+      "git_blob_sha": "9a00cc9fec338afb5b5a3726c3b36764b8d4aabe",
+      "bytes": 819
+    },
+    {
+      "ruta": "docs/trazabilidad.md",
+      "git_blob_sha": "741783e92310d101b6554f1fff8323cda6cf3f93",
+      "bytes": 2585
+    },
+    {
+      "ruta": "docs/user-flow.md",
+      "git_blob_sha": "06b92e27705884524af9b21d2ad94716a9d21009",
+      "bytes": 2317
+    },
+    {
+      "ruta": "evaluacion/.gitkeep",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "ruta": "evaluacion/accesibilidad.md",
+      "git_blob_sha": "49fb38c6e94c7046ccc7322f5e1411b42a9e2220",
+      "bytes": 5145
+    },
+    {
+      "ruta": "evaluacion/backlog.md",
+      "git_blob_sha": "47ee011e66590231fc89a1d55ca5a7d91b3587f6",
+      "bytes": 2284
+    },
+    {
+      "ruta": "evaluacion/consentimiento.md",
+      "git_blob_sha": "d58e44b553863863ce23251980eb17f902951734",
+      "bytes": 1067
+    },
+    {
+      "ruta": "evaluacion/cuestionario.md",
+      "git_blob_sha": "86dee3d774ccad2e17457355468f84c69cab3a9f",
+      "bytes": 1116
+    },
+    {
+      "ruta": "evaluacion/hallazgos.md",
+      "git_blob_sha": "1f64ac3cb353a082ac3a74c33dc5fd8d55191aa1",
+      "bytes": 1967
+    },
+    {
+      "ruta": "evaluacion/heuristicas.md",
+      "git_blob_sha": "83dc2446c2fd6a1977a5bbe6670251d0e5430460",
+      "bytes": 5788
+    },
+    {
+      "ruta": "evaluacion/hoja-observacion.md",
+      "git_blob_sha": "bab303d1a49e1eae0b2dbdc0e58cff32e257f38e",
+      "bytes": 610
+    },
+    {
+      "ruta": "evaluacion/metricas.md",
+      "git_blob_sha": "ca5735b5570352f94a294481865d90e170aedb1a",
+      "bytes": 2167
+    },
+    {
+      "ruta": "evaluacion/piloto.md",
+      "git_blob_sha": "448f7e29476d6c4076ce604ca27db4304c044c81",
+      "bytes": 546
+    },
+    {
+      "ruta": "evaluacion/plan.md",
+      "git_blob_sha": "d64ad60094459d699897659f2485972cdd151f7d",
+      "bytes": 2440
+    },
+    {
+      "ruta": "evaluacion/recorrido-cognitivo.md",
+      "git_blob_sha": "d141a7c678dea5d5100e0774127551c67231be00",
+      "bytes": 3807
+    },
+    {
+      "ruta": "evaluacion/resultados.csv",
+      "git_blob_sha": "5c1ae58ec63bb1011ab665d9eb9e7db7e53f532c",
+      "bytes": 75
+    },
+    {
+      "ruta": "evaluacion/sesiones/LEEME.txt",
+      "git_blob_sha": "3f0b72b68f8203edd22213e107028ec6edc64a32",
+      "bytes": 73
+    },
+    {
+      "ruta": "evaluacion/sus.csv",
+      "git_blob_sha": "60a945bbf2e01674d92a6bc183d051b2c8710abb",
+      "bytes": 52
+    },
+    {
+      "ruta": "evaluacion/tareas.md",
+      "git_blob_sha": "c1b47525203b8f232745a4dfa9d5f5cf709734b8",
+      "bytes": 1989
+    },
+    {
+      "ruta": "evidencias/antes/.gitkeep",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "ruta": "evidencias/antes/H01.png",
+      "git_blob_sha": "5b946fbcd1fe131a7f81f4b053241547b1158a7c",
+      "bytes": 95081
+    },
+    {
+      "ruta": "evidencias/antes/H02.png",
+      "git_blob_sha": "5fa7eae68319559b8f5d8e1643a3f56b332a5684",
+      "bytes": 46948
+    },
+    {
+      "ruta": "evidencias/antes/H03.png",
+      "git_blob_sha": "ca6432951c7622f85e78a01cbeb6e263b31be3a7",
+      "bytes": 41356
+    },
+    {
+      "ruta": "evidencias/antes/H04.png",
+      "git_blob_sha": "8b74d5c22f44ada9abd2467e33e2dd2f3b3a980f",
+      "bytes": 95237
+    },
+    {
+      "ruta": "evidencias/antes/H05.png",
+      "git_blob_sha": "99bc660804015478b47992c0228d6c11f0739290",
+      "bytes": 92528
+    },
+    {
+      "ruta": "evidencias/despues/.gitkeep",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "ruta": "package.json",
+      "git_blob_sha": "b922d37158a0a9cc27eaaed9a225469c9703f234",
+      "bytes": 344
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-01-catalogo.png",
+      "git_blob_sha": "b3e81ae9fe8d734a61743c8e752c1c8dc7ec800c",
+      "bytes": 138640
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-02-carrito.png",
+      "git_blob_sha": "b5aa2bddc41d9b6507996f0c9f611f14ed3f01d5",
+      "bytes": 192613
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-03-eliminar-deshacer.png",
+      "git_blob_sha": "6e7cafd428219d0f2e5362eba19d729c6bce1798",
+      "bytes": 180997
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-04-revisar.png",
+      "git_blob_sha": "eb541a3b3e60f7a84eb6fbf63548a4c409ca7f26",
+      "bytes": 191971
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-escritorio-05-confirmado.png",
+      "git_blob_sha": "f82b671fbb00d77f5f5f565681304dbc54a5b340",
+      "bytes": 54492
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-01-catalogo.png",
+      "git_blob_sha": "9e1a9f432391f0baee759e1406eae4a2f3db793d",
+      "bytes": 74965
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-02-carrito.png",
+      "git_blob_sha": "71d530646fc49d1567c91403dc2951ca00a986be",
+      "bytes": 67182
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-03-eliminar-deshacer.png",
+      "git_blob_sha": "177b4a05329a67188cbcc719ae489cd1fb19501f",
+      "bytes": 61935
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-04-revisar.png",
+      "git_blob_sha": "02fd59276a81cd8cd4b9ca5b76c8e9f7e6aef162",
+      "bytes": 62411
+    },
+    {
+      "ruta": "prototipos/version-v1/v1-movil-05-confirmado.png",
+      "git_blob_sha": "edfcd9a6eeaf32d042897532ab8f697591314069",
+      "bytes": 43238
+    },
+    {
+      "ruta": "prototipos/wireframes/.gitkeep",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0
+    },
+    {
+      "ruta": "prototipos/wireframes/README.md",
+      "git_blob_sha": "297a7e16599bd395e5bea11dfb18de007517e419",
+      "bytes": 628
+    },
+    {
+      "ruta": "scripts/servidor.js",
+      "git_blob_sha": "4d41642f308cf8c3cd1f59897e2349fa191aec5f",
+      "bytes": 1482
+    },
+    {
+      "ruta": "src/application/casosDeUso.js",
+      "git_blob_sha": "cc18bd802c1c3b1478d8ed121bd0755230f9116e",
+      "bytes": 4361
+    },
+    {
+      "ruta": "src/domain/DetallePedido.js",
+      "git_blob_sha": "73ab7910e7e51ccdccbca09ef7e092b91f388cda",
+      "bytes": 1350
+    },
+    {
+      "ruta": "src/domain/Pedido.js",
+      "git_blob_sha": "28e4ab6ff0189fe057eb27567bb9cba52f704acc",
+      "bytes": 4296
+    },
+    {
+      "ruta": "src/domain/Producto.js",
+      "git_blob_sha": "08af7eed66d42bde5daae3fb773aa4ad5b8cca54",
+      "bytes": 1195
+    },
+    {
+      "ruta": "src/domain/errores.js",
+      "git_blob_sha": "938d15ed1a7a62d9d9b4d976e383983619ba0da1",
+      "bytes": 314
+    },
+    {
+      "ruta": "src/domain/texto.js",
+      "git_blob_sha": "c7ff43175588c4e1fcf19d5e7fca820405350f59",
+      "bytes": 309
+    },
+    {
+      "ruta": "src/infrastructure/almacenamiento.js",
+      "git_blob_sha": "fc51939ef875694e7ff39c5a69d206435f4396d3",
+      "bytes": 1539
+    },
+    {
+      "ruta": "src/infrastructure/data/productos.js",
+      "git_blob_sha": "aa7c9aa160445d1bd8a47947d5c6ceb68da42404",
+      "bytes": 2509
+    },
+    {
+      "ruta": "src/infrastructure/repositorios.js",
+      "git_blob_sha": "dae25a398c812469881db4d4265a3721bba237fc",
+      "bytes": 1713
+    },
+    {
+      "ruta": "src/presentation/components/Avisos.js",
+      "git_blob_sha": "bef55207b4789d3ffa16fac20faaac62e7bd1d3a",
+      "bytes": 1466
+    },
+    {
+      "ruta": "src/presentation/components/Carrito.js",
+      "git_blob_sha": "3ade70bb121f72b4ec1b5565382138660176bae2",
+      "bytes": 2401
+    },
+    {
+      "ruta": "src/presentation/components/SelectorCantidad.js",
+      "git_blob_sha": "011630af13406a16e2c4eb39a8ff3183981f3f6c",
+      "bytes": 1851
+    },
+    {
+      "ruta": "src/presentation/components/TarjetaProducto.js",
+      "git_blob_sha": "f8cfae66ccf4f0fcb519608810ab145f295f5983",
+      "bytes": 1304
+    },
+    {
+      "ruta": "src/presentation/components/formato.js",
+      "git_blob_sha": "e0cf6b1b5c751e890704dbb379d1e2fef8094205",
+      "bytes": 952
+    },
+    {
+      "ruta": "src/presentation/index.html",
+      "git_blob_sha": "ddb2ebc712ad1f09ef1053413bd56cfd17732cd8",
+      "bytes": 3487
+    },
+    {
+      "ruta": "src/presentation/main.js",
+      "git_blob_sha": "773663bbf1fed15e60b11bd8181fc1f11170453d",
+      "bytes": 9019
+    },
+    {
+      "ruta": "src/presentation/styles.css",
+      "git_blob_sha": "5b384b722a9a9b885275b0a44e82ea76473199ee",
+      "bytes": 11204
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/humo.test.js",
+      "git_blob_sha": "6a4b5f32013fc4e9bcd01e096df8c32ec734333e",
+      "bytes": 928
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/t1-buscar-agregar.test.js",
+      "git_blob_sha": "4d6403d56472d7f18e29f3647d4d14b90f19f55f",
+      "bytes": 1976
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/t2-cantidad-total.test.js",
+      "git_blob_sha": "8d6c8f2014e760506d2732efa950e406601d9c71",
+      "bytes": 1683
+    },
+    {
+      "ruta": "tests/pruebas-automatizadas/t3-eliminar-confirmar.test.js",
+      "git_blob_sha": "644f5399e7427e76c7188c930d9f99b98d2da4c2",
+      "bytes": 2212
+    }
+  ]
+}

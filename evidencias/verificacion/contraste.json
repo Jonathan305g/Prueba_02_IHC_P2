@@ -1,0 +1,50 @@
+[
+  {
+    "elemento": "Texto normal",
+    "texto": "#1f1a17",
+    "fondo": "#fbf7f2",
+    "ratio": 16.16,
+    "umbral": 4.5,
+    "cumple": true
+  },
+  {
+    "elemento": "Texto secundario",
+    "texto": "#5b524c",
+    "fondo": "#ffffff",
+    "ratio": 7.62,
+    "umbral": 4.5,
+    "cumple": true
+  },
+  {
+    "elemento": "Boton primario",
+    "texto": "#ffffff",
+    "fondo": "#5a3420",
+    "ratio": 10.79,
+    "umbral": 4.5,
+    "cumple": true
+  },
+  {
+    "elemento": "Error",
+    "texto": "#a32020",
+    "fondo": "#ffffff",
+    "ratio": 7.54,
+    "umbral": 4.5,
+    "cumple": true
+  },
+  {
+    "elemento": "Foco sobre blanco",
+    "texto": "#0b57d0",
+    "fondo": "#ffffff",
+    "ratio": 6.39,
+    "umbral": 3,
+    "cumple": true
+  },
+  {
+    "elemento": "Texto de recuperacion",
+    "texto": "#1f1a17",
+    "fondo": "#fff4d6",
+    "ratio": 15.73,
+    "umbral": 4.5,
+    "cumple": true
+  }
+]

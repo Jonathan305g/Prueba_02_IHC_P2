@@ -88,14 +88,13 @@ classDiagram
 
 `normalizarTexto()` descompone el texto en Unicode (NFD), quita las marcas diacríticas, pasa a minúsculas y une espacios. Se aplica a la consulta y al texto del producto (nombre + descripción + categoría). Un producto coincide si contiene todas las palabras de la consulta, en cualquier orden. Ejemplos: `CAFE`, `café`, `cafe leche` y `leche cafe` encuentran "Café con leche"; `sanduche` encuentra "Sánduche mixto".
 
-## Persistencia
+## Persistencia de la actualización 2.0.1
 
-| Clave en LocalStorage | Contenido |
-|---|---|
-| `cafeu:carrito` | Pedido en borrador (sobrevive a recargar la página) |
-| `cafeu:pedidos` | Últimos 20 pedidos confirmados |
+`cafeu:estado-v2` contiene `{version: 1, carrito, pedidos}`. El versionado interno del sobre no es la versión de la aplicación. Confirmar publica historial y carrito vacío en un solo `setItem`, evitando estados parciales. El repositorio expone `confirmarCarrito(pedido)` como parte de su contrato transaccional; cualquier adaptador API debe ofrecer la misma garantía de confirmación.
 
-Si el navegador bloquea LocalStorage (modo privado estricto), `crearAlmacenamiento()` usa la versión en memoria y la app sigue funcionando durante la sesión. Si el carrito guardado está dañado, se descarta y se empieza con uno vacío.
+Si la clave nueva no existe, se leen `cafeu:carrito` y `cafeu:pedidos` de v1. La primera edición guarda el sobre nuevo y conserva las claves antiguas como respaldo. El historial limita a 20 pedidos. No se cambia el contenido del catálogo ni los precios. LocalStorage es específico del origen y no proporciona coordinación de ediciones simultáneas entre pestañas.
+
+El adaptador propaga errores de lectura y escritura. Una confirmación rechazada no informa éxito y mantiene el estado anterior. Si LocalStorage está bloqueado al iniciar, se elige un adaptador en memoria y la interfaz avisa que una recarga perderá los datos de la sesión. Los datos dañados no se borran silenciosamente.
 
 ## Decisiones de interfaz y accesibilidad
 
@@ -108,7 +107,7 @@ Si el navegador bloquea LocalStorage (modo privado estricto), `crearAlmacenamien
 | Zonas táctiles de 44 × 44 px como mínimo | `styles.css` | Selección de cantidades en móvil |
 | Región `role="status"` / `aria-live` para avisos | `Avisos.js` | Visibilidad de mensajes |
 | Selector de cantidad − / campo / +, con límites y error junto al campo | `SelectorCantidad.js` | Selección de cantidades, recuperación de errores |
-| Eliminar y cancelar sin confirmación previa pero con **Deshacer** durante 10 s | `main.js`, `EliminarDelCarrito`, `CancelarPedido` | Eliminación accidental |
+| Eliminar con **Deshacer** persistente en el carrito; cancelar requiere confirmación y permite recuperar | `main.js`, `EliminarDelCarrito`, `CancelarPedido` | Eliminación accidental |
 | Diálogo "Revisa tu pedido" antes de confirmar | `main.js` | Confirmación de pedido |
 | Mensajes de error que dicen qué pasó y cómo seguir | `domain/*` | Recuperación de errores |
 | Foco gestionado: después de agregar vuelve al botón; después de eliminar pasa a la línea siguiente; al confirmar va al título "Pedido confirmado" | `main.js` | Orientación del usuario |
@@ -118,3 +117,8 @@ Si el navegador bloquea LocalStorage (modo privado estricto), `crearAlmacenamien
 - **Nueva regla de negocio:** va en `domain/` con su prueba en `tests/pruebas-automatizadas/`.
 - **Nueva acción del usuario:** caso de uso en `application/casosDeUso.js` y registro en `crearCasosDeUso()`.
 - **Nuevo componente visual:** función en `presentation/components/` que recibe datos y callbacks y devuelve un nodo DOM. No debe llamar a repositorios.
+
+
+## Actualización y verificación
+
+La búsqueda incorpora `normalizarBusqueda` para expreso/expresso/espresso. `main.js` serializa mutaciones y aperturas de revisión para respetar el orden de las ediciones, y actualiza el carrito en sitio para no perder clics al editar cantidades directamente. Tanto las garantías de persistencia y reglas (26 pruebas en Node) como el recorrido automatizado en navegador (`15/15` en Google Chrome) están ejecutados. [Registro](../evaluacion/validacion-v2.md).
